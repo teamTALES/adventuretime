@@ -1,7 +1,7 @@
 'use strict';
 
 
-const Player = {
+const player = {
     name: '',
     character: 0,
     choices: [],
@@ -9,38 +9,36 @@ const Player = {
 
 
 const introForm = document.getElementById('character');
-const character1 = document.getElementById('character1');
-const character2 = document.getElementById('character2');
-
-character1.addEventListener('click', function(){
-    Player.character = 1;
-    character1.setAttribute('style', 'color: white;');
-    character2.setAttribute('style', 'color: black;');
-});
-
-character2.addEventListener('click', function(){
-    Player.character = 2;
-    character2.setAttribute('style', 'color: white;');
-    character1.setAttribute('style', 'color: black;');
-});
 
 
 console.log(introForm);
 introForm.addEventListener('submit', function(){
     event.preventDefault();
+    const c1 = document.getElementById('c1');
+    const c2 = document.getElementById('c2');
 
-    Player.name = this['character'].value;
-    console.log(Player.name);
-    console.log(Player.character);
-    window.location.href = 'game.html';
+    if (c1.checked){
+        player.character = 1;
+    } else if (c2.checked){
+        player.character = 2;
+    } else {
+        alert('Please pick a character!');
+    }
 
+    player.name = this['character'].value;
+
+    if (player.character > 0){
+        localStorage.setItem('settings', JSON.stringify(player));
+        window.location.href = 'game.html';
+    }
 });
 
+const game = {
+    player: '',
 
-
-const Game = {
-    onLoad: function (){
-        //check for localStorage
+    start: function (){
+        this.player = JSON.parse(localStorage.getItem('settings'));
+        console.log(this.player);
 
     }
 };

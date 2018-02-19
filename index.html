@@ -7,12 +7,19 @@
     <body>
         <h1>Choose your own adventure!</h1>
 
-        <section id="chooseME">
-            <div id="character1">1</div>
-            <div id="character2">2</div>
-        </section>
-
         <form id="character">
+            <label for="character 1">
+                <input type="radio" name="appearence" value="red" id="c1" />
+                <div id="character1">1</div>
+            </label>
+
+            <label for="character 2">
+                    <input type="radio" name="appearence" value="blue" id="c2" />
+                    <div id="character2">2</div>
+            </label>
+            <br>
+
+
             <label for="character">Name your character:</label>
             <input name="character" type="text" required></input>
 
