@@ -1,6 +1,6 @@
 # adventuretime
 Team Name: Team Tales
-Members: Ryan M, Spencer, Tasha, Jen
+Members: Ryan M, Tasha, Jen
 Goal: Create a nostalgic experience to the bygone era of choose-your-own-adventure games and books.  For users with a background or curiosity for the history of gaming and technology.  A fun and immersive experience.
 
 //wire frames
