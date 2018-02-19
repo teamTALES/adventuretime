@@ -14,24 +14,17 @@ const game = {
     },
 
     reload: function (){
-        //delete previous text
-        // switch (this.player.choices[this.player.choices.length - 1]){
-        // case 'A':
-        //     console.log('You picked A!');
-        //     break;
 
-        // case 'B':
-        //     console.log('You picked B!');
-        //     break;
-
-        // default:
-        //     console.log('error!');
-        //     break;
-        // }
-        
         let newLevel = this.player.choices[this.player.choices.length - 1];
         newLevel = newLevel.concat(this.level);
         console.log(newLevel);
+
+        function isMatch(array){
+            return array.name === newLevel;
+        }
+
+        const choice = story.find(isMatch); // eslint-disable-line
+        this.story.textContent = choice.story;
 
     }
 };
@@ -41,6 +34,7 @@ const choices = document.getElementById('choices');
 choices.a.addEventListener('click', function (){
     game.player.choices.push('A');
     game.level ++;
+
     game.reload();
 });
 
