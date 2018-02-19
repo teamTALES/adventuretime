@@ -1,6 +1,7 @@
 const game = {
     player: '',
     story: document.getElementById('story'),
+    level: 0,
 
     start: function (){
         this.player = JSON.parse(localStorage.getItem('settings'));
@@ -14,19 +15,23 @@ const game = {
 
     reload: function (){
         //delete previous text
-        switch (this.player.choices[this.player.choices.length - 1]){
-        case 'A':
-            console.log('You picked A!');
-            break;
+        // switch (this.player.choices[this.player.choices.length - 1]){
+        // case 'A':
+        //     console.log('You picked A!');
+        //     break;
 
-        case 'B':
-            console.log('You picked B!');
-            break;
+        // case 'B':
+        //     console.log('You picked B!');
+        //     break;
 
-        default:
-            console.log('error!');
-            break;
-        }
+        // default:
+        //     console.log('error!');
+        //     break;
+        // }
+        
+        let newLevel = this.player.choices[this.player.choices.length - 1];
+        newLevel = newLevel.concat(this.level);
+        console.log(newLevel);
 
     }
 };
@@ -35,11 +40,13 @@ const choices = document.getElementById('choices');
 
 choices.a.addEventListener('click', function (){
     game.player.choices.push('A');
+    game.level ++;
     game.reload();
 });
 
 choices.b.addEventListener('click', function (){
-    game.player.choices.push('B');    
+    game.player.choices.push('B');
+    game.level ++;
     game.reload();
 });
 
