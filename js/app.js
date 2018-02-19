@@ -1,14 +1,19 @@
 'use strict';
 
+const introForm = document.getElementById('character');
+const resume = document.getElementById('resume');
 
 const player = {
     name: '',
     character: 0,
+    resume: false,
     choices: [],
 };
 
 
-const introForm = document.getElementById('character');
+if (localStorage.getItem('settings')){
+    resume.setAttribute('style', 'display: inline-block');
+}
 
 
 console.log(introForm);
@@ -33,15 +38,10 @@ introForm.addEventListener('submit', function(){
     }
 });
 
-const game = {
-    player: '',
-
-    start: function (){
-        this.player = JSON.parse(localStorage.getItem('settings'));
-        console.log(this.player);
-
-    }
-};
+resume.addEventListener('click', function(){
+    console.log('Resumed!');
+    window.location.href = 'game.html';
+});
 
 
 
