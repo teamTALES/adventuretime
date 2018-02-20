@@ -1,3 +1,21 @@
+const choices = document.getElementById('choices');
+
+choices.a.addEventListener('click', function (){
+    game.player.choices.push('A');
+    game.level ++;
+
+    game.endCheck();
+
+});
+
+choices.b.addEventListener('click', function (){
+    game.player.choices.push('B');
+    game.level ++;
+
+    game.endCheck();
+});
+
+
 const game = {
     player: '',
     story: document.getElementById('story'),
@@ -7,7 +25,9 @@ const game = {
         this.player = JSON.parse(localStorage.getItem('settings'));
 
         if (this.player.choices.length === 0){
-            this.story.textContent = `Welcome, ${this.player.name}!`;
+            this.story.innerHTML = `Welcome, ${this.player.name}! ` + script[0].story; // eslint-disable-line
+            choices.a.innerText = script[0].aButton; // eslint-disable-line
+            choices.b.innerText = script[0].bButton; // eslint-disable-line
         } else {
             this.level = this.player.choices.length;
             this.reload();
@@ -25,9 +45,14 @@ const game = {
             return array.name === newLevel;
         }
 
-        const choice = story.find(isMatch); // eslint-disable-line
-        this.story.textContent = choice.story;
+
+        const choice = script.find(isMatch); // eslint-disable-line
+
+        this.story.innerHTML = choice.story;
+        choices.a.innerText = choice.aButton;
+        choices.b.innerText = choice.bButton;
         this.player.abChoices.push(newLevel);
+
     },
 
     endCheck: function() {
@@ -47,25 +72,5 @@ const game = {
         }
     },
 };
-
-const choices = document.getElementById('choices');
-
-choices.a.addEventListener('click', function (){
-    game.player.choices.push('A');
-    game.level ++;
-
-    game.endCheck();
-
-});
-
-choices.b.addEventListener('click', function (){
-    game.player.choices.push('B');
-    game.level ++;
-
-    game.endCheck();
-});
-
-
-// choices.a.innerText = 'text text'
 
 game.start();
