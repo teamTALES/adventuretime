@@ -6,7 +6,7 @@ const winOrLose = resultsArray[resultsArray.length - 1].abChoices[currentPlayer.
 console.log(winOrLose);
 
 if (winOrLose === 'AB2' || winOrLose === 'BB2') {
-    console.log('You Win"')
+    console.log('You Win"');
 
 } else {}//run losing function
 
