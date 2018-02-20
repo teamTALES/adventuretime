@@ -13,3 +13,7 @@
     background-color: red;
     display: inline-block;
 }
+
+#resume{
+    display: none;
+}
