@@ -14,8 +14,6 @@ if (localStorage.getItem('settings')){
     resume.setAttribute('style', 'display: inline-block');
 }
 
-// add character 3
-console.log(introForm);
 introForm.addEventListener('submit', function(){
     event.preventDefault();
     const c1 = document.getElementById('c1');
@@ -41,7 +39,6 @@ introForm.addEventListener('submit', function(){
 });
 
 resume.addEventListener('click', function(){
-    console.log('Resumed!');
     window.location.href = 'game.html';
 });
 

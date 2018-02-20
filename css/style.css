@@ -24,11 +24,9 @@
     display: none;
 }
 
-#game-window{
+#consoleWindow{
     width: 734px;
     height: 288px;
-    background-image: url('../images/pixel-village.png');
-    background-repeat: no-repeat;
     background-size: contain;
     position: relative;
 }
@@ -38,6 +36,24 @@
     top: 120px;
     left: 120px;
 }
+
+.village{
+    background-image: url('../images/pixel-village.png');
+    background-repeat: no-repeat;
+
+}
+
+.forest{
+    background-image: url('../images/pixel-forest.jpg');
+    background-repeat: repeat;
+}
+
+.field{
+    background-image: url('../images/pixel-field.png');
+    background-repeat: no-repeat;
+
+}
+
 .sj {
     width: 5px;
     height: 5px;
