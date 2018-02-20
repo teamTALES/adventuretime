@@ -7,6 +7,7 @@ const player = {
     name: '',
     character: 0,
     choices: [],
+    abChoices: []
 };
 
 

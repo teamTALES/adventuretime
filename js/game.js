@@ -45,11 +45,14 @@ const game = {
             return array.name === newLevel;
         }
 
+
         const choice = script.find(isMatch); // eslint-disable-line
 
         this.story.innerHTML = choice.story;
         choices.a.innerText = choice.aButton;
         choices.b.innerText = choice.bButton;
+        this.player.abChoices.push(newLevel);
+
     },
 
     endCheck: function() {
