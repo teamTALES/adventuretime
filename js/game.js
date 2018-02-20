@@ -19,6 +19,7 @@ const game = {
     player: '',
     story: document.getElementById('story'),
     level: 0,
+    avatar: document.getElementById('avatar'),
 
     start: function (){
         this.player = JSON.parse(localStorage.getItem('settings'));
@@ -31,6 +32,8 @@ const game = {
             this.level = this.player.choices.length;
             this.reload();
         }
+
+        this.avatar.className = this.player.character;
     },
 
     reload: function (){

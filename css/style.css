@@ -25,17 +25,18 @@
 }
 
 #game-window{
-    width: 600px;
-    height: 400px;
-    background-color: green;
+    width: 734px;
+    height: 288px;
+    background-image: url('../images/pixel-village.png');
+    background-repeat: no-repeat;
+    background-size: contain;
     position: relative;
 }
 
-#game-window img{
-    width: 100px;
+#avatar{
     position: absolute;
-    top: 200px;
-    left: 50px;
+    top: 120px;
+    left: 120px;
 }
 .sj {
     width: 5px;
