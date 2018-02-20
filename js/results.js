@@ -3,8 +3,7 @@
 const resultsArray = JSON.parse(localStorage.getItem('results'));
 const currentPlayer = resultsArray[resultsArray.length - 1];
 
-let endID = currentPlayer.choices.join('');
-endID = endID.concat(currentPlayer.choices.length);
+const endID = currentPlayer.choices.concat(currentPlayer.choices.length);
 
 if (endID === 'AB2' || endID === 'BB2') {
     document.getElementsByTagName('header')[0].innerHTML = 'You win!';
@@ -29,9 +28,7 @@ for (let i = 0; i < resultsArray.length; i++){
     // card.appendChild('img');
     const summary = document.createElement('h2');
 
-
-    let endID = resultsArray[i].choices.join('');
-    endID = endID.concat(resultsArray[i].choices.length);
+    const endID = resultsArray[i].choices.concat(resultsArray[i].choices.length);
 
     summary.textContent = resultsArray[i].name + endID;
 

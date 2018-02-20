@@ -1,16 +1,15 @@
 const choices = document.getElementById('choices');
 
 choices.a.addEventListener('click', function (){
-    game.player.choices.push('A');
-    game.level ++;
-
+    game.player.choices += 'A';
+    game.level++;
     game.endCheck();
 
 });
 
 choices.b.addEventListener('click', function (){
-    game.player.choices.push('B');
-    game.level ++;
+    game.player.choices += 'B';
+    game.level++;
 
     game.endCheck();
 });
@@ -37,14 +36,12 @@ const game = {
     reload: function (){
         localStorage.setItem('settings', JSON.stringify(this.player));
 
-        let newLevel = this.player.choices.join('');
-        newLevel = newLevel.concat(this.level);
+        const newLevel = this.player.choices.concat(this.level);
         console.log(newLevel);
 
         function isMatch(array){
             return array.name === newLevel;
         }
-
 
         const choice = script.find(isMatch); // eslint-disable-line
 
