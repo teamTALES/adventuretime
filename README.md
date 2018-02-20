@@ -3,8 +3,12 @@ Team Name: Team Tales
 Members: Ryan M, Tasha, Jen
 Goal: Create a nostalgic experience to the bygone era of choose-your-own-adventure games and books.  For users with a background or curiosity for the history of gaming and technology.  A fun and immersive experience.
 
-//wire frames
-//domain model
+# Wire Frames
+[See Wireframes](images/wireframe.pdf)
+
+#Domain Model
+[See Domain](images/domain.PNG)
+![domain model](images/domain.PNG)
 
 # MVP
 3 HTML Pages (Start, Game, Results)
