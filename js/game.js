@@ -1,21 +1,3 @@
-const choices = document.getElementById('choices');
-
-choices.a.addEventListener('click', function (){
-    game.player.choices.push('A');
-    game.level ++;
-
-    game.endCheck();
-
-});
-
-choices.b.addEventListener('click', function (){
-    game.player.choices.push('B');
-    game.level ++;
-
-    game.endCheck();
-});
-
-
 const game = {
     player: '',
     story: document.getElementById('story'),
@@ -25,9 +7,7 @@ const game = {
         this.player = JSON.parse(localStorage.getItem('settings'));
 
         if (this.player.choices.length === 0){
-            this.story.innerHTML = `Welcome, ${this.player.name}! ` + script[0].story; // eslint-disable-line
-            choices.a.innerText = script[0].aButton; // eslint-disable-line
-            choices.b.innerText = script[0].bButton; // eslint-disable-line
+            this.story.textContent = `Welcome, ${this.player.name}!`;
         } else {
             this.level = this.player.choices.length;
             this.reload();
@@ -45,31 +25,56 @@ const game = {
             return array.name === newLevel;
         }
 
-
-        const choice = script.find(isMatch); // eslint-disable-line
-
-        this.story.innerHTML = choice.story;
-        choices.a.innerText = choice.aButton;
-        choices.b.innerText = choice.bButton;
-
-    },
-
-    endCheck: function() {
-        if (game.level >= 2){
-            if (localStorage.getItem('results')){
-                const resultsArray = JSON.parse(localStorage.getItem('results'));
-                resultsArray.push(game.player);
-                localStorage.setItem('results', JSON.stringify(resultsArray));
-            } else {
-                const resultsArray = [game.player];
-                localStorage.setItem('results', JSON.stringify(resultsArray));
-            }
-            localStorage.removeItem('settings');
-            window.location.href = 'results.html';
-        } else {
-            game.reload();
-        }
-    },
+        const choice = story.find(isMatch); // eslint-disable-line
+        this.story.textContent = choice.story;
+    }
 };
+
+const choices = document.getElementById('choices');
+
+choices.a.addEventListener('click', function (){
+    game.player.choices.push('A');
+    game.level ++;
+
+    if (game.level > 2){
+        console.log("You dead");
+        if (localStorage.getItem('results')){
+            let resultsArray = JSON.parse(localStorage.getItem('results'));
+            resultsArray.push(game.player);
+            localStorage.setItem('results', JSON.stringify(resultsArray));
+        } else {
+            let resultsArray = [game.player];
+            localStorage.setItem('results', JSON.stringify(resultsArray));
+        }
+        localStorage.removeItem('settings');
+    } else {
+        game.reload();
+    }
+});
+
+choices.b.addEventListener('click', function (){
+    game.player.choices.push('B');
+    game.level ++;
+
+    if (game.level > 2){
+        console.log("You dead");
+        if (localStorage.getItem('results')){
+            let resultsArray = JSON.parse(localStorage.getItem('results'));
+            resultsArray.push(game.player);
+            localStorage.setItem('results', JSON.stringify(resultsArray));
+        } else {
+            let resultsArray = [game.player];
+            localStorage.setItem('results', JSON.stringify(resultsArray));
+        }
+        localStorage.removeItem('settings');
+    } else {
+        game.reload();
+    }
+});
+
+
+// choices.a.innerText = 'text text'
+//end death
+
 
 game.start();
