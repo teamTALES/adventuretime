@@ -25,15 +25,15 @@ const game = {
         this.player = JSON.parse(localStorage.getItem('settings'));
 
         if (this.player.choices.length === 0){
-            this.story.innerHTML = `Welcome, ${this.player.name}! ` + script[0].story;
-            choices.a.innerText = script[0].aButton;
-            choices.b.innerText = script[0].bButton;
+            this.story.innerHTML = `Welcome, ${this.player.name}! ` + script[0].story; // eslint-disable-line
+            choices.a.innerText = script[0].aButton; // eslint-disable-line
+            choices.b.innerText = script[0].bButton; // eslint-disable-line
         } else {
             this.level = this.player.choices.length;
             this.reload();
         }
     },
- 
+
     reload: function (){
         localStorage.setItem('settings', JSON.stringify(this.player));
 
@@ -46,8 +46,6 @@ const game = {
         }
 
         const choice = script.find(isMatch); // eslint-disable-line
-
-        // choices.a.innerText = 'text text'
 
         this.story.innerHTML = choice.story;
         choices.a.innerText = choice.aButton;
@@ -66,7 +64,6 @@ const game = {
                 localStorage.setItem('results', JSON.stringify(resultsArray));
             }
             localStorage.removeItem('settings');
-            window.location.href = 'results.html';
         } else {
             game.reload();
         }
