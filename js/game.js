@@ -56,8 +56,7 @@ const game = {
     },
 
     endCheck: function() {
-        if (game.level > 2){
-            console.log('You dead');
+        if (game.level >= 2){
             if (localStorage.getItem('results')){
                 const resultsArray = JSON.parse(localStorage.getItem('results'));
                 resultsArray.push(game.player);
@@ -67,6 +66,7 @@ const game = {
                 localStorage.setItem('results', JSON.stringify(resultsArray));
             }
             localStorage.removeItem('settings');
+            window.location.href = 'results.html';
         } else {
             game.reload();
         }

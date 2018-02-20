@@ -2,11 +2,21 @@
 
 const resultsArray = JSON.parse(localStorage.getItem('results'));
 const currentPlayer = resultsArray[resultsArray.length - 1];
-const winOrLose = resultsArray[resultsArray.length - 1].abChoices[currentPlayer.abChoices.length - 1];
-console.log(winOrLose);
 
-if (winOrLose === 'AB2' || winOrLose === 'BB2') {
-    console.log('You Win"');
+let endID = currentPlayer.choices.join('');
+endID = endID.concat(currentPlayer.choices.length);
 
-} else {}//run losing function
+if (endID === 'AB2' || endID === 'BB2') {
+    document.getElementsByTagName('header')[0].innerHTML = 'You win!';
+} else {
+    document.getElementsByTagName('header')[0].innerHTML = 'You Lose!';
+}
 
+function isMatch(array){
+    return array.name === endID;
+}
+
+const result = script.find(isMatch); // eslint-disable-line
+
+const text = document.getElementById('text');
+text.innerHTML = result.story;
