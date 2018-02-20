@@ -50,7 +50,7 @@
 
 .field{
     background-image: url('../images/pixel-field.png');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 
 }
 
