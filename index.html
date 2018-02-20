@@ -8,30 +8,26 @@
         <h1>Choose your own adventure!</h1>
 
         <form id="character">
-            <label for="character 1">
-                <input type="radio" name="appearence" value="red" id="c1" />
-                <div id="character1">SJ</div>
-            </label>
-
-            <label for="character 2">
-                    <input type="radio" name="appearence" value="blue" id="c2" />
-                    <div id="character2">Andrew</div>
-            </label>
-
-            <label for="character 3">
-                    <input type="radio" name="appearence" value="green" id="c3" />
-                    <div id="character3">Erdem</div>
-            </label>
-            <br>
+            <fieldset id="chooseAvatar">
+                <div class="pick" id="sj">
+                    <div class="sj"></div>
+                </div>
+                <div class="pick" id="andrew">
+                    <div class="andrew"></div>
+                </div>
+                <div class="pick" id="erdem">
+                    <div class="erdem"></div>
+                </div>
+            </fieldset>
 
             <label for="character">Name your character:</label>
             <input name="character" type="text" required></input>
 
             <button name="resume" type="button" id="resume">Resume?</button>
             <button name="play" type="submit" id="play">Play!</button>
-
         </form>
     
+        <div id="error"></div>
       <script src="js/start.js"></script>
     </body>
     

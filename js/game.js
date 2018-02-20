@@ -14,12 +14,12 @@ choices.b.addEventListener('click', function (){
     game.endCheck();
 });
 
-
 const game = {
     player: '',
-    story: document.getElementById('story'),
     level: 0,
     avatar: document.getElementById('avatar'),
+    story: document.getElementById('story'),
+    consoleWindow: document.getElementById('consoleWindow'),
 
     start: function (){
         this.player = JSON.parse(localStorage.getItem('settings'));
@@ -51,6 +51,8 @@ const game = {
         this.story.innerHTML = choice.story;
         choices.a.innerText = choice.aButton;
         choices.b.innerText = choice.bButton;
+
+        this.consoleWindow.className = choice.bg;
 
     },
 
