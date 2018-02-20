@@ -66,6 +66,7 @@ const game = {
                 localStorage.setItem('results', JSON.stringify(resultsArray));
             }
             localStorage.removeItem('settings');
+            window.location.href = 'results.html';
         } else {
             game.reload();
         }
