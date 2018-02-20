@@ -6,8 +6,7 @@ const resume = document.getElementById('resume');
 const player = {
     name: '',
     character: 0,
-    choices: [],
-    abChoices: []
+    choices: '',
 };
 
 
@@ -21,11 +20,14 @@ introForm.addEventListener('submit', function(){
     event.preventDefault();
     const c1 = document.getElementById('c1');
     const c2 = document.getElementById('c2');
+    const c3 = document.getElementById('c3');
 
     if (c1.checked){
         player.character = 1;
     } else if (c2.checked){
         player.character = 2;
+    } else if (c3.checked){
+        player.character = 3;
     } else {
         alert('Please pick a character!');
     }
@@ -36,7 +38,7 @@ introForm.addEventListener('submit', function(){
         localStorage.setItem('settings', JSON.stringify(player));
         window.location.href = 'game.html';
     }
-}); 
+});
 
 resume.addEventListener('click', function(){
     console.log('Resumed!');
