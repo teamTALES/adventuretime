@@ -14,7 +14,7 @@ if (localStorage.getItem('settings')){
     resume.setAttribute('style', 'display: inline-block');
 }
 
-
+// add character 3
 console.log(introForm);
 introForm.addEventListener('submit', function(){
     event.preventDefault();
@@ -35,7 +35,7 @@ introForm.addEventListener('submit', function(){
         localStorage.setItem('settings', JSON.stringify(player));
         window.location.href = 'game.html';
     }
-});
+}); 
 
 resume.addEventListener('click', function(){
     console.log('Resumed!');
