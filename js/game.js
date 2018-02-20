@@ -27,7 +27,24 @@ const game = {
 
         const choice = story.find(isMatch); // eslint-disable-line
         this.story.textContent = choice.story;
-    }
+    },
+
+    endCheck: function() {
+        if (game.level > 2){
+            console.log('You dead');
+            if (localStorage.getItem('results')){
+                const resultsArray = JSON.parse(localStorage.getItem('results'));
+                resultsArray.push(game.player);
+                localStorage.setItem('results', JSON.stringify(resultsArray));
+            } else {
+                const resultsArray = [game.player];
+                localStorage.setItem('results', JSON.stringify(resultsArray));
+            }
+            localStorage.removeItem('settings');
+        } else {
+            game.reload();
+        }
+    },
 };
 
 const choices = document.getElementById('choices');
@@ -36,45 +53,18 @@ choices.a.addEventListener('click', function (){
     game.player.choices.push('A');
     game.level ++;
 
-    if (game.level > 2){
-        console.log("You dead");
-        if (localStorage.getItem('results')){
-            let resultsArray = JSON.parse(localStorage.getItem('results'));
-            resultsArray.push(game.player);
-            localStorage.setItem('results', JSON.stringify(resultsArray));
-        } else {
-            let resultsArray = [game.player];
-            localStorage.setItem('results', JSON.stringify(resultsArray));
-        }
-        localStorage.removeItem('settings');
-    } else {
-        game.reload();
-    }
+    game.endCheck();
+
 });
 
 choices.b.addEventListener('click', function (){
     game.player.choices.push('B');
     game.level ++;
 
-    if (game.level > 2){
-        console.log("You dead");
-        if (localStorage.getItem('results')){
-            let resultsArray = JSON.parse(localStorage.getItem('results'));
-            resultsArray.push(game.player);
-            localStorage.setItem('results', JSON.stringify(resultsArray));
-        } else {
-            let resultsArray = [game.player];
-            localStorage.setItem('results', JSON.stringify(resultsArray));
-        }
-        localStorage.removeItem('settings');
-    } else {
-        game.reload();
-    }
+    game.endCheck();
 });
 
 
 // choices.a.innerText = 'text text'
-//end death
-
 
 game.start();

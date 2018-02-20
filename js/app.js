@@ -6,7 +6,6 @@ const resume = document.getElementById('resume');
 const player = {
     name: '',
     character: 0,
-    resume: false,
     choices: [],
 };
 
