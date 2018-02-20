@@ -51,7 +51,6 @@ const game = {
         this.story.innerHTML = choice.story;
         choices.a.innerText = choice.aButton;
         choices.b.innerText = choice.bButton;
-        this.player.abChoices.push(newLevel);
 
     },
 

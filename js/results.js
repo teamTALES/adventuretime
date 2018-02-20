@@ -20,3 +20,21 @@ const result = script.find(isMatch); // eslint-disable-line
 
 const text = document.getElementById('text');
 text.innerHTML = result.story;
+
+for (let i = 0; i < resultsArray.length; i++){
+    const previous = document.getElementById('previous');
+
+    const card = document.createElement('div');
+    card.className = 'oldResult';
+    // card.appendChild('img');
+    const summary = document.createElement('h2');
+
+
+    let endID = resultsArray[i].choices.join('');
+    endID = endID.concat(resultsArray[i].choices.length);
+
+    summary.textContent = resultsArray[i].name + endID;
+
+    card.appendChild(summary);
+    previous.appendChild(card);
+}

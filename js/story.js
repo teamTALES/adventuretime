@@ -1,5 +1,5 @@
 'use strict';
-
+/* eslint-disable */
 const script = [ // eslint-disable-line
     {name: 'intro', story: '<p>There are few narratives that can so completely capture your senses that you find yourself quite literally pulled into it’s story. You were warned to take care while leafing through it’s pages, but took no heed. Now you find yourself suddenly in a small, provincial town where once your own home used to be. Instead of the familiar contemporary furnishings there are thatch roof houses and rustic peasants gawking at your unusual clothes. You have become the hero of your own story! You see to the right of you a slightly muddy road stretching off into the horizon of patchwork fields, and to the left the same road bends toward a wooded glen. Where do you go now?</p>',
     aButton: 'Take the forest path', bButton: 'Go down the road'},
