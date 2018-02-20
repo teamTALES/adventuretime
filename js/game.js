@@ -15,7 +15,7 @@ const game = {
 
     reload: function (){
 
-        let newLevel = this.player.choices[this.player.choices.length - 1];
+        let newLevel = this.player.choices.join('');
         newLevel = newLevel.concat(this.level);
         console.log(newLevel);
 
@@ -25,7 +25,6 @@ const game = {
 
         const choice = story.find(isMatch); // eslint-disable-line
         this.story.textContent = choice.story;
-
     }
 };
 
@@ -44,3 +43,6 @@ choices.b.addEventListener('click', function (){
     game.reload();
 });
 
+// local storage
+// buttons
+//end death
