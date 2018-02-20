@@ -27,6 +27,7 @@ const game = {
 
         const choice = story.find(isMatch); // eslint-disable-line
         this.story.textContent = choice.story;
+        this.player.abChoices.push(newLevel);
     },
 
     endCheck: function() {
