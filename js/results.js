@@ -4,6 +4,7 @@ const resultsArray = JSON.parse(localStorage.getItem('results'));
 const currentPlayer = resultsArray[resultsArray.length - 1];
 
 const avatar = document.getElementById('avatar');
+const consoleWindow = document.getElementById('consoleWindow');
 avatar.className = currentPlayer.character;
 const endID = currentPlayer.choices.concat(currentPlayer.choices.length);
 
@@ -15,6 +16,7 @@ const result = script.find(isMatch); // eslint-disable-line
 
 const text = document.getElementById('text');
 text.innerHTML = result.story;
+consoleWindow.className = result.bg;
 
 for (let i = 0; i < resultsArray.length; i++){
     const previous = document.getElementById('previous');
@@ -31,7 +33,12 @@ for (let i = 0; i < resultsArray.length; i++){
 
     avaBox.className = 'avaBox';
     avatar.className = resultsArray[i].character;
-    summary.textContent = 'teadffdaf, fda dead.'
+    function isMatch(array){
+        return array.name === endID;
+    }
+    
+    const result = script.find(isMatch); // eslint-disable-line
+    summary.textContent = result.summary;
 
     charName.textContent = resultsArray[i].name + endID;
 
