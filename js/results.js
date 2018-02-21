@@ -37,7 +37,7 @@ for (let i = 0; i < resultsArray.length; i++){
     function isMatch(array){
         return array.name === endID;
     }
-    
+
     const result = script.find(isMatch); // eslint-disable-line
     summary.textContent = result.summary;
 
