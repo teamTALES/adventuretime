@@ -31,7 +31,7 @@ for (let i = 0; i < resultsArray.length; i++){
 
     avaBox.className = 'avaBox';
     avatar.className = resultsArray[i].character;
-    summary.textContent = 'teadffdaf, fda dead.'
+    summary.textContent = 'teadffdaf, fda dead.';
 
     charName.textContent = resultsArray[i].name + endID;
 
