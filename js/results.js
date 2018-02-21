@@ -3,13 +3,9 @@
 const resultsArray = JSON.parse(localStorage.getItem('results'));
 const currentPlayer = resultsArray[resultsArray.length - 1];
 
+const avatar = document.getElementById('avatar');
+avatar.className = currentPlayer.character;
 const endID = currentPlayer.choices.concat(currentPlayer.choices.length);
-
-if (endID === 'AB2' || endID === 'BB2') {
-    document.getElementsByTagName('header')[0].innerHTML = 'You win!';
-} else {
-    document.getElementsByTagName('header')[0].innerHTML = 'You Lose!';
-}
 
 function isMatch(array){
     return array.name === endID;

@@ -1,3 +1,6 @@
+header{
+    text-align: center;
+}
 
 .pick {
     display: inline-block;
@@ -42,7 +45,12 @@
 .field{
     background-image: url('../images/pixel-field.png');
     background-repeat: repeat;
+}
 
+.room{
+    background-image: url('../images/pixel-room.png');
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .sj {

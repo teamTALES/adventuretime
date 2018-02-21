@@ -28,6 +28,7 @@ Adding character inventory
 
 #TO DOS
 1. Back error.
+2. Dynamically load result console window.
 2. Write ending results summaries.
 3. All CSS ever
 4. Timers
