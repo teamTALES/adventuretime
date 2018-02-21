@@ -5,26 +5,32 @@
        <link rel="stylesheet" id='css' href="css/style.css">
     </head>
     <body>
-        <h1>Choose your own adventure!</h1>
+        <header><h1>Choose your own adventure!</h1></header>
 
         <form id="character">
             <fieldset id="chooseAvatar">
                 <div class="pick" id="sj">
-                    <div class="sj"></div>
+                    <div class="sj char"></div>
+                    <p>"SJ"</p>
                 </div>
                 <div class="pick" id="andrew">
-                    <div class="andrew"></div>
+                    <div class="andrew char"></div>
+                    <p>"Andrew"</p>
                 </div>
                 <div class="pick" id="erdem">
-                    <div class="erdem"></div>
+                    <div class="erdem char"></div>
+                    <p>"Erdem"</p>
                 </div>
             </fieldset>
 
-            <label for="character">Name your character:</label>
+            <label for="character">Name your character:
             <input name="character" type="text" required></input>
-
-            <button name="resume" type="button" id="resume">Resume?</button>
-            <button name="play" type="submit" id="play">Play!</button>
+            </label>
+            <br>
+            <section id="buttons">
+                <button name="resume" type="button" id="resume">Resume?</button>
+                <button name="play" type="submit" id="play">Play!</button>
+            </section>
         </form>
     
         <div id="error"></div>

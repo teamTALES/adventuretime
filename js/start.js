@@ -4,6 +4,7 @@ localStorage.setItem('gameInProgress', 'false');
 
 const introForm = document.getElementById('character');
 const resume = document.getElementById('resume');
+const picks = document.querySelectorAll('.pick');
 
 const player = {
     name: '',
@@ -19,6 +20,10 @@ if (localStorage.getItem('settings')){
 const chooseAvatar = document.getElementById('chooseAvatar');
 chooseAvatar.addEventListener('click', function(){
     player.character = event.target.id;
+    picks.forEach(function(node){
+        node.classList.remove('active');
+    });
+    event.target.classList.add('active');
     console.log(player.character);
 });
 
