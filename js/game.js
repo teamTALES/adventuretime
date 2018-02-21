@@ -1,3 +1,5 @@
+'use strict';
+
 const choices = document.getElementById('choices');
 
 choices.a.addEventListener('click', function (){
