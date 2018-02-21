@@ -26,5 +26,10 @@ Adding sound effects
 Adding animations
 Adding character inventory
 
-
-
+#TO DOS
+1. Back error.
+2. Write ending results summaries.
+3. All CSS ever
+4. Timers
+5. Animations?
+6. Sound?

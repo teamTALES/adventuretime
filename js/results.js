@@ -26,12 +26,22 @@ for (let i = 0; i < resultsArray.length; i++){
     const card = document.createElement('div');
     card.className = 'oldResult';
     // card.appendChild('img');
-    const summary = document.createElement('h2');
-
+    const charName = document.createElement('h3');
+    const summary = document.createElement('h4');
     const endID = resultsArray[i].choices.concat(resultsArray[i].choices.length);
 
-    summary.textContent = resultsArray[i].name + endID;
+    const avaBox = document.createElement('div');
+    const avatar = document.createElement('div');
 
+    avaBox.className = 'avaBox';
+    avatar.className = resultsArray[i].character;
+    summary.textContent = 'teadffdaf, fda dead.'
+
+    charName.textContent = resultsArray[i].name + endID;
+
+    avaBox.appendChild(avatar);
+    card.appendChild(avaBox);
+    card.appendChild(charName);
     card.appendChild(summary);
     previous.appendChild(card);
 }
