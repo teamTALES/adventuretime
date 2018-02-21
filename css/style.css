@@ -1,23 +1,5 @@
-
-#character1{
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-    display: inline-block;
-}
-
-#character2{
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    display: inline-block;
-}
-
-#character3{
-    width: 100px;
-    height: 100px;
-    background-color: green;
-    display: inline-block;
+header{
+    text-align: center;
 }
 
 .pick {
@@ -43,10 +25,16 @@
     left: 120px;
 }
 
+#previous {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .village{
     background-image: url('../images/pixel-village.png');
     background-repeat: no-repeat;
-
 }
 
 .forest{
@@ -57,7 +45,12 @@
 .field{
     background-image: url('../images/pixel-field.png');
     background-repeat: repeat;
+}
 
+.room{
+    background-image: url('../images/pixel-room.png');
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .sj {
@@ -81,3 +74,38 @@
     box-shadow: 55px 10px 0 #000000,60px 10px 0 #000000,65px 10px 0 #000000,70px 10px 0 #000000,75px 10px 0 #000000,55px 15px 0 #000000,60px 15px 0 #000000,65px 15px 0 #FFAC59,70px 15px 0 #FFAC59,75px 15px 0 #FFAC59,55px 20px 0 #000000,60px 20px 0 #FFAC59,65px 20px 0 #FFAC59,70px 20px 0 #FFAC59,75px 20px 0 #FFAC59,55px 25px 0 #FFAC59,60px 25px 0 #000000,65px 25px 0 #FFAC59,70px 25px 0 #FFAC59,75px 25px 0 #000000,55px 30px 0 #BF1111,60px 30px 0 #000000,65px 30px 0 #000000,70px 30px 0 #000000,75px 30px 0 #000000,50px 35px 0 #BF1111,55px 35px 0 #BF1111,60px 35px 0 #FFAC59,65px 35px 0 #FFAC59,70px 35px 0 #BF1111,75px 35px 0 #BF1111,50px 40px 0 #000000,55px 40px 0 #BF1111,60px 40px 0 #000000,65px 40px 0 #45381E,70px 40px 0 #000000,75px 40px 0 #BF1111,80px 40px 0 #000000,50px 45px 0 #BF1111,55px 45px 0 #000000,60px 45px 0 #BF1111,65px 45px 0 #BF1111,70px 45px 0 #BF1111,75px 45px 0 #000000,80px 45px 0 #BF1111,50px 50px 0 #000000,55px 50px 0 #BF1111,60px 50px 0 #000000,65px 50px 0 #BF1111,70px 50px 0 #000000,75px 50px 0 #BF1111,80px 50px 0 #000000,50px 55px 0 #BF1111,55px 55px 0 #000000,60px 55px 0 #BF1111,65px 55px 0 #BF1111,70px 55px 0 #BF1111,75px 55px 0 #000000,80px 55px 0 #BF1111,45px 60px 0 #BF1111,50px 60px 0 #000000,55px 60px 0 #BF1111,60px 60px 0 #000000,65px 60px 0 #BF1111,70px 60px 0 #000000,75px 60px 0 #BF1111,80px 60px 0 #000000,85px 60px 0 #BF1111,45px 65px 0 #000000,50px 65px 0 #BF1111,55px 65px 0 #000000,60px 65px 0 #BF1111,65px 65px 0 #BF1111,70px 65px 0 #BF1111,75px 65px 0 #000000,80px 65px 0 #BF1111,85px 65px 0 #000000,50px 70px 0 #45381E,55px 70px 0 #BF1111,60px 70px 0 #000000,65px 70px 0 #48A5DB,70px 70px 0 #000000,75px 70px 0 #BF1111,80px 70px 0 #45381E,50px 75px 0 #FFAC59,55px 75px 0 #48A5DB,60px 75px 0 #48A5DB,65px 75px 0 #48A5DB,70px 75px 0 #BF1111,75px 75px 0 #48A5DB,80px 75px 0 #FFAC59,55px 80px 0 #48A5DB,60px 80px 0 #48A5DB,70px 80px 0 #48A5DB,75px 80px 0 #48A5DB,55px 85px 0 #48A5DB,60px 85px 0 #48A5DB,70px 85px 0 #48A5DB,75px 85px 0 #48A5DB,55px 90px 0 #48A5DB,60px 90px 0 #48A5DB,70px 90px 0 #48A5DB,75px 90px 0 #48A5DB,55px 95px 0 #48A5DB,60px 95px 0 #48A5DB,70px 95px 0 #48A5DB,75px 95px 0 #48A5DB,60px 100px 0 #48A5DB,70px 100px 0 #48A5DB,75px 100px 0 #48A5DB,60px 105px 0 #48A5DB,75px 105px 0 #48A5DB,60px 110px 0 #48A5DB,75px 110px 0 #48A5DB,60px 115px 0 #48A5DB,75px 115px 0 #48A5DB,60px 120px 0 #45381E,75px 120px 0 #45381E,60px 125px 0 #45381E,75px 125px 0 #45381E;
 
 } 
+
+.oldResult {
+    width: 350px;
+    height: 150px;
+    border: 2px solid black;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.avaBox {
+    height: 100%;
+    width: 40%;
+    display: inline-block;
+}
+
+.oldResult h3{
+    width: 60%;
+    height: 20%;
+    display: inline;
+    margin: 0;
+
+}
+
+.oldResult h4{
+    width: 60%;
+    height: 80%;
+    display: inline;
+    margin: 0;
+}
