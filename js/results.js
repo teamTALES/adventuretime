@@ -33,10 +33,11 @@ for (let i = 0; i < resultsArray.length; i++){
 
     avaBox.className = 'avaBox';
     avatar.className = resultsArray[i].character;
+
     function isMatch(array){
         return array.name === endID;
     }
-    
+
     const result = script.find(isMatch); // eslint-disable-line
     summary.textContent = result.summary;
 

@@ -29,7 +29,7 @@ introForm.addEventListener('submit', function(){
         localStorage.setItem('settings', JSON.stringify(player));
         window.location.href = 'game.html';
     } else {
-        document.getElementById('error').textContent = 'Please select a character!'
+        document.getElementById('error').textContent = 'Please select a character!';
     }
 });
 
