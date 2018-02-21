@@ -1,5 +1,7 @@
 'use strict';
 
+localStorage.setItem('gameInProgress', 'false');
+
 const introForm = document.getElementById('character');
 const resume = document.getElementById('resume');
 
@@ -27,13 +29,15 @@ introForm.addEventListener('submit', function(){
 
     if (player.character){
         localStorage.setItem('settings', JSON.stringify(player));
+        localStorage.setItem('gameInProgress', 'true');
         window.location.href = 'game.html';
     } else {
-        document.getElementById('error').textContent = 'Please select a character!'
+        document.getElementById('error').textContent = 'Please select a character!';
     }
 });
 
 resume.addEventListener('click', function(){
+    localStorage.setItem('gameInProgress', 'true');
     window.location.href = 'game.html';
 });
 

@@ -22,6 +22,7 @@ const game = {
     consoleWindow: document.getElementById('consoleWindow'),
 
     start: function (){
+        localStorage.setItem('gameInProgress','true');
         this.player = JSON.parse(localStorage.getItem('settings'));
 
         if (this.player.choices.length === 0){
@@ -67,6 +68,7 @@ const game = {
                 localStorage.setItem('results', JSON.stringify(resultsArray));
             }
             localStorage.removeItem('settings');
+            localStorage.setItem('gameInProgress', 'false');
             window.location.href = 'results.html';
         } else {
             game.reload();
@@ -74,4 +76,6 @@ const game = {
     },
 };
 
+const gameInProgress = localStorage.getItem('gameInProgress');
+if (gameInProgress === 'false') window.location.href = 'index.html';
 game.start();
