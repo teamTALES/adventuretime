@@ -14,7 +14,6 @@ choices.b.addEventListener('click', function (){
     game.endCheck();
 });
 
-
 const game = {
     player: '',
     story: document.getElementById('story'),
