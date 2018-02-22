@@ -1,8 +1,7 @@
-
 'use strict';
 
-
 const choices = document.getElementById('choices');
+const header = document.querySelector('header');
 
 choices.a.addEventListener('click', function (){
     game.player.choices += 'A';
@@ -24,6 +23,8 @@ const game = {
     avatar: document.getElementById('avatar'),
     story: document.getElementById('story'),
     consoleWindow: document.getElementById('consoleWindow'),
+    header: document.querySelector('header'),
+    title:  document.createElement('h1'),
 
     start: function (){
         localStorage.setItem('gameInProgress','true');
@@ -39,6 +40,8 @@ const game = {
         }
 
         this.avatar.className = this.player.character;
+        this.title.textContent = 'Chapter 1';
+        this.header.appendChild(this.title);
     },
 
     reload: function (){
@@ -59,6 +62,8 @@ const game = {
 
         this.consoleWindow.className = choice.bg;
 
+        this.title.textContent = 'Chapter ' + (this.level + 1);
+        this.header.appendChild(this.title);
     },
 
     endCheck: function() {
