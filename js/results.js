@@ -79,7 +79,7 @@ nav.addEventListener('click', function(){
     }
 });
 
-const mutebutton = document.getElementById('mute');
+const mutebutton = document.getElementById('mute');  // mute control for navigation bar
 const musicplayer = document.getElementById('music');
 mutebutton.addEventListener('click', function (){
     if (mutebutton.getAttribute('src') === 'images/mute.png') {

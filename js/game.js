@@ -85,7 +85,7 @@ const game = {
     },
 };
 
-const mutebutton = document.getElementById('mute');
+const mutebutton = document.getElementById('mute');  // mute control for nav bar
 const musicplayer = document.getElementById('music');
 mutebutton.addEventListener('click', function (){
     if (mutebutton.getAttribute('src') === 'images/mute.png') {
