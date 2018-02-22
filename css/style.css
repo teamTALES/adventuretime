@@ -253,9 +253,15 @@ nav #music {
     padding: 10px;
     border-radius: 80px;
     opacity: .85;
+    animation: fadein 2s;
 }
 
 #mute, #home, #resultsicon {
     width: 25%;
     padding-left: 1px;
 }
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: .85; }
+} 
