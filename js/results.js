@@ -1,5 +1,7 @@
 'use strict';
 
+if (!localStorage.getItem('gameInProgress')) window.location.href = 'index.html';
+
 const resultsArray = JSON.parse(localStorage.getItem('results'));
 const currentPlayer = resultsArray[resultsArray.length - 1];
 
