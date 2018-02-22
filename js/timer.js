@@ -4,11 +4,11 @@ let startLevel = 0;
 function timer() {
     startLevel = game.level;
     console.log(startLevel);
-    setTimeout(timer2, 60000);
+    setTimeout(timer2, 30000);
 };
 timer();
 function timer2() {
-    let secs = 60;
+    let secs = 30;
     function ticker() {
         secs--;
         if (secs > 0) {
@@ -19,14 +19,14 @@ function timer2() {
             minutes--;
             timer2(minutes);
         }
-    }    
+    }
     ticker();
 }
 function randomSelection() {
     const currentLevel = game.level;
     if(startLevel === currentLevel) {
         const random = ['A', 'B'];
-        const randomNumber = Math.floor(Math.random()*random.length);
+        const randomNumber = Math.floor(Math.random() * random.length);
         game.player.choices += random[randomNumber];
         game.level++;
         game.endCheck();
