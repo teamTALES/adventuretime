@@ -22,7 +22,7 @@ if (result.bg === 'death') {
     music.setAttribute('src', 'audio/Galway.mp3');
 }
 
-const text = document.getElementById('text');
+const text = document.getElementById('story');
 text.innerHTML = result.story;
 consoleWindow.className = result.bg;
 
