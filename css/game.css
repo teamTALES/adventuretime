@@ -49,3 +49,33 @@
 .death{
     background-color: black;
 }
+/* 
+Floating Nav */
+
+.navigation {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 96.38px;
+    height: 25px;
+    background-color: #ec2424;
+    padding: 10px;
+    border-radius: 80px;
+    opacity: .85;
+    animation: fadein 2s;
+}
+
+#mute, #home, #resultsicon {
+    width: 25%;
+    padding-left: 1px;
+}
+
+#mute:hover, #home:hover, #resultsicon:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: .85; }
+} 
