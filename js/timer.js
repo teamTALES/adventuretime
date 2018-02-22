@@ -1,31 +1,36 @@
-window.setTimeout(timer2(2), 1000);
+let minutes = 1;
+let startLevel = 0;
 
-function timer2(minutes) {
-    let secs = 5;
-    let mins = minutes;
+function timer() {
+    startLevel = game.level;
+    console.log(startLevel);
+    setTimeout(timer2, 60000);
+};
+timer();
+function timer2() {
+    let secs = 60;
     function ticker() {
         secs--;
         if (secs > 0) {
-            setTimeout(ticker(), 1000);
-        } else if (secs === 0 && mins === 0) {
-            console.log('works!');
+            setTimeout(ticker, 1000);
+        } else if (secs === 0 && minutes === 0) {
+            randomSelection();
         } else if (secs === 0) {
-            mins--;
-            timer2(mins);
+            minutes--;
+            timer2(minutes);
         }
-    }
+    }    
     ticker();
 }
-// function randomSelection() {
-//     // if(game.level++) {
-//     //     timer();
-//     // } else {
-//         console.log('works!');
-//         const random = ['A', 'B'];
-//         const randomNumber = Math.floor(Math.random() * random.length);
-//         game.player.choices += random[randomNumber];
-//         game.level++;
-//         game.endCheck();
-    
+function randomSelection() {
+    const currentLevel = game.level;
+    if(startLevel === currentLevel) {
+        const random = ['A', 'B'];
+        const randomNumber = Math.floor(Math.random()*random.length);
+        game.player.choices += random[randomNumber];
+        game.level++;
+        game.endCheck();
+        timer();
 
-
+    }
+}
