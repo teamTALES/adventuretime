@@ -14,6 +14,14 @@ function isMatch(array){
 
 const result = script.find(isMatch); // eslint-disable-line
 
+if (result.bg === 'death') {
+    const music = document.getElementById('music');
+    music.setAttribute('src', 'audio/LandoftheDead.mp3');
+} else {
+    const music = document.getElementById('music');
+    music.setAttribute('src', 'audio/Galway.mp3');
+}
+
 const text = document.getElementById('text');
 text.innerHTML = result.story;
 consoleWindow.className = result.bg;
