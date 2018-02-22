@@ -31,3 +31,4 @@ Adding character inventory
 2. All CSS ever
 3. Animations?
 4. Moar story
+5. Idea: add date + time to previous results

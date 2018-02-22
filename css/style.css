@@ -19,16 +19,20 @@
     font-weight: normal;
     font-style: normal;
 }
-
-body, html{
+html{
     margin: 0;
     padding: 0;
     font: 400 18px 'Arcade';
     color: black;
+    min-width: 1000px;
+    background: url(../images/book.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
-    background: url(../images/book.png);
+    margin: 0;
+    padding: 30px 50px 60px 70px;
 }
 
 header{
@@ -133,6 +137,8 @@ button, label {
     background-size: contain;
     position: relative;
     margin: auto;
+    border: 5px solid #aa9d78;
+    background-color: #cabb91;
 }
 
 #story {
@@ -224,4 +230,13 @@ button, label {
     height: 80%;
     display: inline;
     margin: 0;
+}
+
+nav {
+    margin: 20px auto;
+    width: fit-content;
+}
+
+nav #music {
+    padding: 0px 0px 10px 40px;
 }

@@ -7,6 +7,7 @@ const avatar = document.getElementById('avatar');
 const consoleWindow = document.getElementById('consoleWindow');
 avatar.className = currentPlayer.character;
 const endID = currentPlayer.choices.concat(currentPlayer.choices.length);
+const header = document.querySelector('header');
 
 function isMatch(array){
     return array.name === endID;
@@ -17,9 +18,15 @@ const result = script.find(isMatch); // eslint-disable-line
 if (result.bg === 'death') {
     const music = document.getElementById('music');
     music.setAttribute('src', 'audio/LandoftheDead.mp3');
+    const h1 = document.createElement('h1');
+    h1.textContent = 'You Lose!';
+    header.appendChild(h1);
 } else {
     const music = document.getElementById('music');
     music.setAttribute('src', 'audio/Galway.mp3');
+    const h1 = document.createElement('h1');
+    h1.textContent = 'You Win!';
+    header.appendChild(h1);
 }
 
 const text = document.getElementById('story');
@@ -57,3 +64,15 @@ for (let i = 0; i < resultsArray.length; i++){
     card.appendChild(summary);
     previous.appendChild(card);
 }
+
+const nav = document.querySelector('nav');
+nav.addEventListener('click', function(){
+    console.log(event.target.id);
+    if (event.target.id === 'leaderboard'){
+        //
+    } else if (event.target.id === 'restart'){
+        window.location.href = 'index.html';
+    } else if (event.target.id === 'credits'){
+
+    }
+});
