@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Tale of the Tales</title>
+        <title>Tale of Tales</title>
        <link rel="stylesheet" id='css' href="css/main.css">
        <link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet">
     </head>
     <body>
         <!-- <img id="background" src="images/book.png"> -->
-        <header><h1>CHOOSE YOUR OWN ADVENTURE!</h1></header>
+        <header>
+            <h1 class="chapterTitles">CHOOSE YOUR OWN ADVENTURE!</h1>
+            <h2>YOU'RE THE STAR OF THE STORY!</h2>
+            <h2>CHOOSE FROM MULTIPLE POSSIBLE ENDINGS.</h2>
+            <hr>
+            <h1 id="bookTitle">THE BOOK OF DOORS</h1>
+            <hr>
+        </header>
 
         <form id="character">
             <div id="chooseAvatar">
-                <div class="pick" id="sj">
-                    <div class="sj char"></div>
-                    <p>SJ</p>
-                </div>
-                <div class="pick" id="andrew">
-                    <div class="andrew char"></div>
-                    <p>Andrew</p>
-                </div>
-                <div class="pick" id="erdem">
-                    <div class="erdem char"></div>
-                    <p>Erdem</p>
-                </div>
+                <div id="slider"></div>
+                    <div class="pick" id="sj">
+                        <p>SJ</p>
+                        <div class="sj char"></div>
+                    </div>
+                    <div class="pick" id="andrew">
+                        <p>Andrew</p>
+                        <div class="andrew char"></div>
+                    </div>
+                    <div class="pick" id="erdem">
+                        <p>Erdem</p>
+                        <div class="erdem char"></div>    
+                    </div>
             </div>
 
-            <label for="character">Name your character:
+            <label for="character">------------PLAYER NAME------------
             <input name="character" type="text" required></input>
             </label>
             <br>
