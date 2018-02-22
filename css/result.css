@@ -1,0 +1,48 @@
+/* Results Page */
+
+#previous {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.oldResult {
+    width: 350px;
+    height: 150px;
+    border: 2px solid black;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: all .2s ease-in-out;
+}
+
+.oldResult:hover{
+    transform: scale(1.05);
+}
+
+.avaBox {
+    height: 100%;
+    width: 40%;
+    display: inline-block;
+}
+
+.oldResult h3{
+    width: 60%;
+    height: 20%;
+    display: inline;
+    margin: 0;
+
+}
+
+.oldResult h4{
+    width: 60%;
+    height: 80%;
+    display: inline;
+    margin: 0;
+}
