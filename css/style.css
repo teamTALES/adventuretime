@@ -1,17 +1,35 @@
 /* Start Page */
+@font-face {
+    font-family: '8BIT WONDER';
+    src: url('fonts/8BITWONDERNominal.eot');
+    src: url('fonts/8BITWONDERNominal.eot?#iefix') format('embedded-opentype'),
+        url('fonts/8BITWONDERNominal.woff2') format('woff2'),
+        url('fonts/8BITWONDERNominal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arcade';
+    src: url('fonts/Arcade.eot');
+    src: url('fonts/Arcade.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Arcade.woff2') format('woff2'),
+        url('fonts/Arcade.woff') format('woff'),
+        url('fonts/Arcade.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body, html{
     margin: 0;
     padding: 0;
+    font: 400 18px 'Arcade';
+    color: black;
 }
 
 body {
     background: url(../images/book.png);
 }
-
-@font-face {
-    font-family: "8-bit";
-    src: url("8-bitWonder.TTF") format("TTF"),
-  }
 
 header{
     text-align: center;
@@ -26,9 +44,7 @@ h1{
     display: inline-block;
     padding: 20px;
     border-radius: 80px;
-
 }
-
 
 #character {
     width: 500px;
@@ -39,7 +55,7 @@ h1{
     margin-bottom: 20px;
 }
 
-#character #buttons {
+#buttons {
     width: fit-content;
     margin: 20px auto;
 }
@@ -52,6 +68,10 @@ h1{
 
 #character input{
     width: 250px;
+}
+
+button, label {
+    font: 400 13px '8BIT WONDER';
 }
 
 #error {
@@ -115,10 +135,21 @@ h1{
     margin: auto;
 }
 
+#story {
+    width: 700px;
+    margin: auto;
+    padding: 20px 0px;
+}
+
 #avatar{
     position: absolute;
     top: 120px;
     left: 120px;
+}
+
+#choices{
+    width: fit-content;
+    margin: auto;
 }
 
 .village{
