@@ -261,6 +261,10 @@ nav #music {
     padding-left: 1px;
 }
 
+#mute:hover, #home:hover, #resultsicon:hover {
+    cursor: pointer;
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: .85; }
