@@ -78,3 +78,15 @@ nav.addEventListener('click', function(){
 
     }
 });
+
+const mutebutton = document.getElementById('mute');
+const musicplayer = document.getElementById('music');
+mutebutton.addEventListener('click', function (){
+    if (mutebutton.getAttribute('src') === 'images/mute.png') {
+        musicplayer.muted = true;
+        mutebutton.setAttribute('src', 'images/unmute.png');
+    } else if (mutebutton.getAttribute('src') === 'images/unmute.png') {
+        musicplayer.muted = false;
+        mutebutton.setAttribute('src', 'images/mute.png');
+    }
+});
