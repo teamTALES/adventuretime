@@ -1,4 +1,4 @@
-/* Start Page */
+/* CSS Standard stylings or all pages, and for the intro page.*/
 @font-face {
     font-family: '8BIT WONDER';
     src: url('fonts/8BITWONDERNominal.eot');
@@ -37,10 +37,11 @@ body {
 
 header{
     text-align: center;
-    margin-top: 100px;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
-h1{
+.chapterTitles{
     font-family: 'Kurale', serif;
     font-size: 2.8em;
     color: white;
@@ -49,23 +50,33 @@ h1{
     padding: 20px;
     border-radius: 80px;
 }
-
-#character {
-    width: 500px;
+#bookTitle {
+    font-family: 'Kurale', serif;
+    font-size: 3em;
+    color: #ec2424;
+}
+hr {
+    width: 75%;
     margin: auto;
 }
 
-#character #chooseAvatar{
-    margin-bottom: 20px;
+#character {
+    width: 35%;
+    margin: auto;
+    margin-bottom: 3%;
+    display: flex;
+    flex-direction: column;
 }
 
 #buttons {
     width: fit-content;
     margin: 20px auto;
 }
+button, label {
+    font: 400 13px '8BIT WONDER';
+}
 
 #character label {
-    display: block;
     width: 250px;
     margin: auto;
 }
@@ -74,36 +85,63 @@ h1{
     width: 250px;
 }
 
-button, label {
-    font: 400 13px '8BIT WONDER';
-}
-
 #error {
     margin: auto;
     text-align: center;
     color: red;
 }
 
+#chooseAvatar {
+    align-self: center;
+    margin-bottom: 30px;
+    border: 15px solid rgb(180, 115, 17);
+    border-style: double;
+    border-radius: 200px 200px 0px 0px;
+    width: 500px;
+    height: 450px;
+    overflow: hidden;
+}
+#slider {
+
+    width: 1000px;
+    height: 475px;
+    background-image: url("../images/pixel-cave.png");
+    background-repeat: repeat-x;
+    animation-name: slide;
+	animation-duration: 60s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+    0% { transform: translate(0px, 0);
+    }
+    100% { transform: translate(-1000px, 0);
+    }
+}
+
+
+
 .pick {
     display: inline-block;
+    margin-top: 45%;
     width: 150px;
     height: 150px;
-    transform: scale(.8);
     position: relative;
     color: rgba(255, 255, 255, 0);
+
 }
 
 .pick p {
-    margin-top: 95%;
     text-align: center;
 }
 
+
 .pick:hover, .active{
-    transform: scale(1);
+    border-radius: 50%;
     cursor: pointer;
     color: black;
-    background-image: url("../images/sunburst.png");
-    background-position: center;
+    font-family: '8BIT WONDER';
+
 }
 
 #resume{
@@ -113,132 +151,25 @@ button, label {
 .sj {
     width: 5px;
     height: 5px;
-  
+    position: absolute;
+    z-index: 1;
+
     box-shadow: 55px 10px 0 #000000,60px 10px 0 #000000,65px 10px 0 #000000,70px 10px 0 #000000,75px 10px 0 #000000,55px 15px 0 #000000,60px 15px 0 #000000,65px 15px 0 #C78645,70px 15px 0 #C78645,75px 15px 0 #000000,55px 20px 0 #000000,60px 20px 0 #000000,65px 20px 0 #C78645,70px 20px 0 #C78645,75px 20px 0 #C78645,55px 25px 0 #C78645,60px 25px 0 #000000,65px 25px 0 #C78645,70px 25px 0 #C78645,75px 25px 0 #C78645,55px 30px 0 #000000,60px 30px 0 #000000,65px 30px 0 #C78645,70px 30px 0 #C78645,75px 30px 0 #000000,55px 35px 0 #000000,60px 35px 0 #000000,65px 35px 0 #C78645,70px 35px 0 #000000,75px 35px 0 #000000,55px 40px 0 #616161,60px 40px 0 #000000,65px 40px 0 #DEDEDE,70px 40px 0 #616161,75px 40px 0 #000000,50px 45px 0 #616161,55px 45px 0 #616161,60px 45px 0 #000000,65px 45px 0 #DEDEDE,70px 45px 0 #616161,75px 45px 0 #616161,80px 45px 0 #616161,50px 50px 0 #616161,55px 50px 0 #616161,60px 50px 0 #616161,65px 50px 0 #DEDEDE,70px 50px 0 #616161,75px 50px 0 #616161,80px 50px 0 #616161,50px 55px 0 #616161,55px 55px 0 #616161,60px 55px 0 #616161,65px 55px 0 #DEDEDE,70px 55px 0 #616161,75px 55px 0 #616161,80px 55px 0 #616161,50px 60px 0 #616161,55px 60px 0 #616161,60px 60px 0 #616161,65px 60px 0 #DEDEDE,70px 60px 0 #616161,75px 60px 0 #616161,80px 60px 0 #616161,50px 65px 0 #616161,55px 65px 0 #616161,60px 65px 0 #616161,65px 65px 0 #DEDEDE,70px 65px 0 #616161,75px 65px 0 #616161,80px 65px 0 #616161,50px 70px 0 #DEDEDE,55px 70px 0 #616161,60px 70px 0 #616161,65px 70px 0 #DEDEDE,70px 70px 0 #616161,75px 70px 0 #616161,80px 70px 0 #DEDEDE,50px 75px 0 #C78645,55px 75px 0 #616161,60px 75px 0 #616161,65px 75px 0 #48A5DB,70px 75px 0 #616161,75px 75px 0 #616161,80px 75px 0 #C78645,55px 80px 0 #48A5DB,60px 80px 0 #616161,65px 80px 0 #48A5DB,70px 80px 0 #616161,75px 80px 0 #48A5DB,55px 85px 0 #48A5DB,60px 85px 0 #48A5DB,65px 85px 0 #48A5DB,70px 85px 0 #48A5DB,75px 85px 0 #48A5DB,55px 90px 0 #48A5DB,60px 90px 0 #48A5DB,70px 90px 0 #48A5DB,75px 90px 0 #48A5DB,55px 95px 0 #48A5DB,60px 95px 0 #48A5DB,70px 95px 0 #48A5DB,75px 95px 0 #48A5DB,60px 100px 0 #48A5DB,70px 100px 0 #48A5DB,75px 100px 0 #48A5DB,60px 105px 0 #48A5DB,75px 105px 0 #48A5DB,60px 110px 0 #48A5DB,75px 110px 0 #48A5DB,60px 115px 0 #48A5DB,75px 115px 0 #48A5DB,60px 120px 0 #000000,75px 120px 0 #000000,60px 125px 0 #000000,75px 125px 0 #000000; 
   }
 
 .andrew {
     width: 5px;
     height: 5px;
+    position: absolute;
         
-    box-shadow: 55px 10px 0 #D9C473,60px 10px 0 #D9C473,65px 10px 0 #D9C473,70px 10px 0 #D9C473,75px 10px 0 #D9C473,55px 15px 0 #D9C473,60px 15px 0 #FFE787,65px 15px 0 #FFE787,70px 15px 0 #FFE787,75px 15px 0 #FFE787,55px 20px 0 #000000,60px 20px 0 #FFFFFF,65px 20px 0 #FFFFFF,70px 20px 0 #000000,75px 20px 0 #FFFFFF,80px 20px 0 #000000,55px 25px 0 #FFE787,60px 25px 0 #FFFFFF,65px 25px 0 #FFFFFF,70px 25px 0 #FFE787,75px 25px 0 #FFFFFF,80px 25px 0 #FFFFFF,60px 30px 0 #FFE787,65px 30px 0 #FFE787,70px 30px 0 #FFE787,75px 30px 0 #FFE787,50px 35px 0 #48A5DB,55px 35px 0 #48A5DB,60px 35px 0 #FFE787,65px 35px 0 #FFE787,70px 35px 0 #48A5DB,75px 35px 0 #48A5DB,80px 35px 0 #48A5DB,50px 40px 0 #48A5DB,55px 40px 0 #48A5DB,60px 40px 0 #48A5DB,65px 40px 0 #FFE787,70px 40px 0 #48A5DB,75px 40px 0 #48A5DB,80px 40px 0 #48A5DB,50px 45px 0 #48A5DB,55px 45px 0 #48A5DB,60px 45px 0 #48A5DB,65px 45px 0 #48A5DB,70px 45px 0 #48A5DB,75px 45px 0 #48A5DB,80px 45px 0 #48A5DB,50px 50px 0 #FFE687,55px 50px 0 #48A5DB,60px 50px 0 #48A5DB,65px 50px 0 #FFFFFF,70px 50px 0 #48A5DB,75px 50px 0 #48A5DB,80px 50px 0 #FFE687,50px 55px 0 #FFE687,55px 55px 0 #48A5DB,60px 55px 0 #FFFFFF,65px 55px 0 #48A5DB,70px 55px 0 #FFFFFF,75px 55px 0 #48A5DB,80px 55px 0 #FFE687,50px 60px 0 #FFE687,55px 60px 0 #48A5DB,60px 60px 0 #48A5DB,65px 60px 0 #48A5DB,70px 60px 0 #48A5DB,75px 60px 0 #48A5DB,80px 60px 0 #FFE687,50px 65px 0 #FFE687,55px 65px 0 #48A5DB,60px 65px 0 #48A5DB,65px 65px 0 #48A5DB,70px 65px 0 #48A5DB,75px 65px 0 #48A5DB,80px 65px 0 #FFE687,50px 70px 0 #FFE687,55px 70px 0 #B69F56,60px 70px 0 #B69F56,65px 70px 0 #B69F56,70px 70px 0 #B69F56,75px 70px 0 #B69F56,80px 70px 0 #FFE687,50px 75px 0 #FFE687,55px 75px 0 #B69F56,60px 75px 0 #B69F56,65px 75px 0 #B69F56,70px 75px 0 #B69F56,75px 75px 0 #B69F56,80px 75px 0 #FFE687,55px 80px 0 #B69F56,60px 80px 0 #B69F56,70px 80px 0 #B69F56,75px 80px 0 #B69F56,50px 85px 0 #B69F56,55px 85px 0 #B69F56,60px 85px 0 #B69F56,70px 85px 0 #B69F56,75px 85px 0 #B69F56,80px 85px 0 #B69F56,50px 90px 0 #B69F56,55px 90px 0 #B69F56,60px 90px 0 #B69F56,70px 90px 0 #B69F56,75px 90px 0 #B69F56,80px 90px 0 #B69F56,50px 95px 0 #B69F56,55px 95px 0 #B69F56,60px 95px 0 #B69F56,70px 95px 0 #B69F56,75px 95px 0 #B69F56,80px 95px 0 #B69F56,55px 100px 0 #B69F56,60px 100px 0 #B69F56,70px 100px 0 #B69F56,75px 100px 0 #B69F56,55px 105px 0 #B69F56,60px 105px 0 #B69F56,75px 105px 0 #B69F56,60px 110px 0 #B69F56,75px 110px 0 #B69F56,60px 115px 0 #B69F56,75px 115px 0 #B69F56,60px 120px 0 #45381E,75px 120px 0 #45381E,60px 125px 0 #45381E,75px 125px 0 #45381E;
+    box-shadow: 55px 10px 0 #D9C473,60px 10px 0 #D9C473,65px 10px 0 #D9C473,70px 10px 0 #D9C473,75px 10px 0 #D9C473,55px 15px 0 #D9C473,60px 15px 0 #FFE787,65px 15px 0 #FFE787,70px 15px 0 #FFE787,75px 15px 0 #FFE787,55px 20px 0 #000000,60px 20px 0 #FFFFFF,65px 20px 0 #FFFFFF,70px 20px 0 #000000,75px 20px 0 #FFFFFF,80px 20px 0 #FFFFFF,55px 25px 0 #FFE787,60px 25px 0 #FFFFFF,65px 25px 0 #FFFFFF,70px 25px 0 #FFE787,75px 25px 0 #FFFFFF,80px 25px 0 #FFFFFF,60px 30px 0 #FFE787,65px 30px 0 #FFE787,70px 30px 0 #FFE787,75px 30px 0 #FFE787,50px 35px 0 #48A5DB,55px 35px 0 #48A5DB,60px 35px 0 #FFE787,65px 35px 0 #FFE787,70px 35px 0 #48A5DB,75px 35px 0 #48A5DB,80px 35px 0 #48A5DB,50px 40px 0 #48A5DB,55px 40px 0 #48A5DB,60px 40px 0 #48A5DB,65px 40px 0 #FFE787,70px 40px 0 #48A5DB,75px 40px 0 #48A5DB,80px 40px 0 #48A5DB,50px 45px 0 #48A5DB,55px 45px 0 #48A5DB,60px 45px 0 #48A5DB,65px 45px 0 #48A5DB,70px 45px 0 #48A5DB,75px 45px 0 #48A5DB,80px 45px 0 #48A5DB,50px 50px 0 #FFE687,55px 50px 0 #48A5DB,60px 50px 0 #48A5DB,65px 50px 0 #FFFFFF,70px 50px 0 #48A5DB,75px 50px 0 #48A5DB,80px 50px 0 #FFE687,50px 55px 0 #FFE687,55px 55px 0 #48A5DB,60px 55px 0 #FFFFFF,65px 55px 0 #48A5DB,70px 55px 0 #FFFFFF,75px 55px 0 #48A5DB,80px 55px 0 #FFE687,50px 60px 0 #FFE687,55px 60px 0 #48A5DB,60px 60px 0 #48A5DB,65px 60px 0 #48A5DB,70px 60px 0 #48A5DB,75px 60px 0 #48A5DB,80px 60px 0 #FFE687,50px 65px 0 #FFE687,55px 65px 0 #48A5DB,60px 65px 0 #48A5DB,65px 65px 0 #48A5DB,70px 65px 0 #48A5DB,75px 65px 0 #48A5DB,80px 65px 0 #FFE687,50px 70px 0 #FFE687,55px 70px 0 #B69F56,60px 70px 0 #B69F56,65px 70px 0 #B69F56,70px 70px 0 #B69F56,75px 70px 0 #B69F56,80px 70px 0 #FFE687,50px 75px 0 #FFE687,55px 75px 0 #B69F56,60px 75px 0 #B69F56,65px 75px 0 #B69F56,70px 75px 0 #B69F56,75px 75px 0 #B69F56,80px 75px 0 #FFE687,55px 80px 0 #B69F56,60px 80px 0 #B69F56,70px 80px 0 #B69F56,75px 80px 0 #B69F56,50px 85px 0 #B69F56,55px 85px 0 #B69F56,60px 85px 0 #B69F56,70px 85px 0 #B69F56,75px 85px 0 #B69F56,80px 85px 0 #B69F56,50px 90px 0 #B69F56,55px 90px 0 #B69F56,60px 90px 0 #B69F56,70px 90px 0 #B69F56,75px 90px 0 #B69F56,80px 90px 0 #B69F56,50px 95px 0 #B69F56,55px 95px 0 #B69F56,60px 95px 0 #B69F56,70px 95px 0 #B69F56,75px 95px 0 #B69F56,80px 95px 0 #B69F56,55px 100px 0 #B69F56,60px 100px 0 #B69F56,70px 100px 0 #B69F56,75px 100px 0 #B69F56,55px 105px 0 #B69F56,60px 105px 0 #B69F56,75px 105px 0 #B69F56,60px 110px 0 #B69F56,75px 110px 0 #B69F56,60px 115px 0 #B69F56,75px 115px 0 #B69F56,60px 120px 0 #45381E,75px 120px 0 #45381E,60px 125px 0 #45381E,75px 125px 0 #45381E;
 }
 
 .erdem {
     width: 5px;
     height: 5px;
+    position: absolute;
     
     box-shadow: 55px 10px 0 #000000,60px 10px 0 #000000,65px 10px 0 #000000,70px 10px 0 #000000,75px 10px 0 #000000,55px 15px 0 #000000,60px 15px 0 #000000,65px 15px 0 #FFAC59,70px 15px 0 #FFAC59,75px 15px 0 #FFAC59,55px 20px 0 #000000,60px 20px 0 #FFAC59,65px 20px 0 #FFAC59,70px 20px 0 #FFAC59,75px 20px 0 #FFAC59,55px 25px 0 #FFAC59,60px 25px 0 #000000,65px 25px 0 #FFAC59,70px 25px 0 #FFAC59,75px 25px 0 #000000,55px 30px 0 #BF1111,60px 30px 0 #000000,65px 30px 0 #000000,70px 30px 0 #000000,75px 30px 0 #000000,50px 35px 0 #BF1111,55px 35px 0 #BF1111,60px 35px 0 #FFAC59,65px 35px 0 #FFAC59,70px 35px 0 #BF1111,75px 35px 0 #BF1111,50px 40px 0 #000000,55px 40px 0 #BF1111,60px 40px 0 #000000,65px 40px 0 #45381E,70px 40px 0 #000000,75px 40px 0 #BF1111,80px 40px 0 #000000,50px 45px 0 #BF1111,55px 45px 0 #000000,60px 45px 0 #BF1111,65px 45px 0 #BF1111,70px 45px 0 #BF1111,75px 45px 0 #000000,80px 45px 0 #BF1111,50px 50px 0 #000000,55px 50px 0 #BF1111,60px 50px 0 #000000,65px 50px 0 #BF1111,70px 50px 0 #000000,75px 50px 0 #BF1111,80px 50px 0 #000000,50px 55px 0 #BF1111,55px 55px 0 #000000,60px 55px 0 #BF1111,65px 55px 0 #BF1111,70px 55px 0 #BF1111,75px 55px 0 #000000,80px 55px 0 #BF1111,45px 60px 0 #BF1111,50px 60px 0 #000000,55px 60px 0 #BF1111,60px 60px 0 #000000,65px 60px 0 #BF1111,70px 60px 0 #000000,75px 60px 0 #BF1111,80px 60px 0 #000000,85px 60px 0 #BF1111,45px 65px 0 #000000,50px 65px 0 #BF1111,55px 65px 0 #000000,60px 65px 0 #BF1111,65px 65px 0 #BF1111,70px 65px 0 #BF1111,75px 65px 0 #000000,80px 65px 0 #BF1111,85px 65px 0 #000000,50px 70px 0 #45381E,55px 70px 0 #BF1111,60px 70px 0 #000000,65px 70px 0 #48A5DB,70px 70px 0 #000000,75px 70px 0 #BF1111,80px 70px 0 #45381E,50px 75px 0 #FFAC59,55px 75px 0 #48A5DB,60px 75px 0 #48A5DB,65px 75px 0 #48A5DB,70px 75px 0 #BF1111,75px 75px 0 #48A5DB,80px 75px 0 #FFAC59,55px 80px 0 #48A5DB,60px 80px 0 #48A5DB,70px 80px 0 #48A5DB,75px 80px 0 #48A5DB,55px 85px 0 #48A5DB,60px 85px 0 #48A5DB,70px 85px 0 #48A5DB,75px 85px 0 #48A5DB,55px 90px 0 #48A5DB,60px 90px 0 #48A5DB,70px 90px 0 #48A5DB,75px 90px 0 #48A5DB,55px 95px 0 #48A5DB,60px 95px 0 #48A5DB,70px 95px 0 #48A5DB,75px 95px 0 #48A5DB,60px 100px 0 #48A5DB,70px 100px 0 #48A5DB,75px 100px 0 #48A5DB,60px 105px 0 #48A5DB,75px 105px 0 #48A5DB,60px 110px 0 #48A5DB,75px 110px 0 #48A5DB,60px 115px 0 #48A5DB,75px 115px 0 #48A5DB,60px 120px 0 #45381E,75px 120px 0 #45381E,60px 125px 0 #45381E,75px 125px 0 #45381E;
 } 
 
-/* Game Page */
-
-#consoleWindow{
-    width: 734px;
-    height: 288px;
-    background-size: contain;
-    position: relative;
-    margin: auto;
-    border: 5px solid #aa9d78;
-    background-color: #cabb91;
-}
-
-#story {
-    width: 700px;
-    margin: auto;
-    padding: 20px 0px;
-}
-
-#avatar{
-    position: absolute;
-    top: 120px;
-    left: 120px;
-}
-
-#choices{
-    width: fit-content;
-    margin: auto;
-}
-
-.village{
-    background-image: url('../images/pixel-village.png');
-    background-repeat: no-repeat;
-}
-
-.forest{
-    background-image: url('../images/pixel-forest.jpg');
-    background-repeat: repeat;
-}
-
-.field{
-    background-image: url('../images/pixel-field.png');
-    background-repeat: repeat;
-}
-
-.room{
-    background-image: url('../images/pixel-room.png');
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.death{
-    background-color: black;
-}
-
-/* Results Page */
-
-#previous {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.oldResult {
-    width: 350px;
-    height: 150px;
-    border: 2px solid black;
-    margin: 10px;
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: all .2s ease-in-out;
-}
-
-.oldResult:hover{
-    transform: scale(1.05);
-}
-
-.avaBox {
-    height: 100%;
-    width: 40%;
-    display: inline-block;
-}
-
-.oldResult h3{
-    width: 60%;
-    height: 20%;
-    display: inline;
-    margin: 0;
-
-}
-
-.oldResult h4{
-    width: 60%;
-    height: 80%;
-    display: inline;
-    margin: 0;
-}
-
-nav {
-    margin: 20px auto;
-    width: fit-content;
-}
-
-nav #music {
-    padding: 0px 0px 10px 40px;
-}
