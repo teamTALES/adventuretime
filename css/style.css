@@ -263,6 +263,7 @@ nav #music {
 
 #mute:hover, #home:hover, #resultsicon:hover {
     cursor: pointer;
+    transform: scale(1.15);
 }
 
 @keyframes fadein {
