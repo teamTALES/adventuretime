@@ -1,11 +1,14 @@
 'use strict';
 
+localStorage.setItem('gameInProgress', 'false');
+
 const introForm = document.getElementById('character');
 const resume = document.getElementById('resume');
+const picks = document.querySelectorAll('.pick');
 
 const player = {
     name: '',
-    character: 0,
+    character: '',
     choices: '',
 };
 
@@ -14,34 +17,32 @@ if (localStorage.getItem('settings')){
     resume.setAttribute('style', 'display: inline-block');
 }
 
-// add character 3
-console.log(introForm);
+const chooseAvatar = document.getElementById('chooseAvatar');
+chooseAvatar.addEventListener('click', function(){
+    player.character = event.target.id;
+    picks.forEach(function(node){
+        node.classList.remove('active');
+    });
+    event.target.classList.add('active');
+    console.log(player.character);
+});
+
 introForm.addEventListener('submit', function(){
     event.preventDefault();
-    const c1 = document.getElementById('c1');
-    const c2 = document.getElementById('c2');
-    const c3 = document.getElementById('c3');
-
-    if (c1.checked){
-        player.character = 1;
-    } else if (c2.checked){
-        player.character = 2;
-    } else if (c3.checked){
-        player.character = 3;
-    } else {
-        alert('Please pick a character!');
-    }
 
     player.name = this['character'].value;
 
-    if (player.character > 0){
+    if (player.character){
         localStorage.setItem('settings', JSON.stringify(player));
+        localStorage.setItem('gameInProgress', 'true');
         window.location.href = 'game.html';
+    } else {
+        document.getElementById('error').textContent = 'Please select a character!';
     }
 });
 
 resume.addEventListener('click', function(){
-    console.log('Resumed!');
+    localStorage.setItem('gameInProgress', 'true');
     window.location.href = 'game.html';
 });
 

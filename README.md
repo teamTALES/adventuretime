@@ -26,5 +26,9 @@ Adding sound effects
 Adding animations
 Adding character inventory
 
-
-
+#TO DOS
+2. Refactor
+3. All CSS ever
+4. Timers
+5. Animations?
+6. Sound?

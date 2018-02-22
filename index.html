@@ -5,33 +5,35 @@
        <link rel="stylesheet" id='css' href="css/style.css">
     </head>
     <body>
-        <h1>Choose your own adventure!</h1>
+        <header><h1>Choose your own adventure!</h1></header>
 
         <form id="character">
-            <label for="character 1">
-                <input type="radio" name="appearence" value="red" id="c1" />
-                <div id="character1">1</div>
-            </label>
+            <fieldset id="chooseAvatar">
+                <div class="pick" id="sj">
+                    <div class="sj char"></div>
+                    <p>"SJ"</p>
+                </div>
+                <div class="pick" id="andrew">
+                    <div class="andrew char"></div>
+                    <p>"Andrew"</p>
+                </div>
+                <div class="pick" id="erdem">
+                    <div class="erdem char"></div>
+                    <p>"Erdem"</p>
+                </div>
+            </fieldset>
 
-            <label for="character 2">
-                    <input type="radio" name="appearence" value="blue" id="c2" />
-                    <div id="character2">2</div>
-            </label>
-
-            <label for="character 3">
-                    <input type="radio" name="appearence" value="green" id="c3" />
-                    <div id="character3">3</div>
+            <label for="character">Name your character:
+            <input name="character" type="text" required></input>
             </label>
             <br>
-
-            <label for="character">Name your character:</label>
-            <input name="character" type="text" required></input>
-
-            <button name="resume" type="button" id="resume">Resume?</button>
-            <button name="play" type="submit" id="play">Play!</button>
-
+            <section id="buttons">
+                <button name="resume" type="button" id="resume">Resume?</button>
+                <button name="play" type="submit" id="play">Play!</button>
+            </section>
         </form>
     
+        <div id="error"></div>
       <script src="js/start.js"></script>
     </body>
     

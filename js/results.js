@@ -3,13 +3,10 @@
 const resultsArray = JSON.parse(localStorage.getItem('results'));
 const currentPlayer = resultsArray[resultsArray.length - 1];
 
+const avatar = document.getElementById('avatar');
+const consoleWindow = document.getElementById('consoleWindow');
+avatar.className = currentPlayer.character;
 const endID = currentPlayer.choices.concat(currentPlayer.choices.length);
-
-if (endID === 'AB2' || endID === 'BB2') {
-    document.getElementsByTagName('header')[0].innerHTML = 'You win!';
-} else {
-    document.getElementsByTagName('header')[0].innerHTML = 'You Lose!';
-}
 
 function isMatch(array){
     return array.name === endID;
@@ -17,8 +14,17 @@ function isMatch(array){
 
 const result = script.find(isMatch); // eslint-disable-line
 
+if (result.bg === 'death') {
+    const music = document.getElementById('music');
+    music.setAttribute('src', 'audio/LandoftheDead.mp3');
+} else {
+    const music = document.getElementById('music');
+    music.setAttribute('src', 'audio/Galway.mp3');
+}
+
 const text = document.getElementById('text');
 text.innerHTML = result.story;
+consoleWindow.className = result.bg;
 
 for (let i = 0; i < resultsArray.length; i++){
     const previous = document.getElementById('previous');
@@ -26,12 +32,28 @@ for (let i = 0; i < resultsArray.length; i++){
     const card = document.createElement('div');
     card.className = 'oldResult';
     // card.appendChild('img');
-    const summary = document.createElement('h2');
-
+    const charName = document.createElement('h3');
+    const summary = document.createElement('h4');
     const endID = resultsArray[i].choices.concat(resultsArray[i].choices.length);
 
-    summary.textContent = resultsArray[i].name + endID;
+    const avaBox = document.createElement('div');
+    const avatar = document.createElement('div');
 
+    avaBox.className = 'avaBox';
+    avatar.className = resultsArray[i].character;
+
+    function isMatch(array){
+        return array.name === endID;
+    }
+
+    const result = script.find(isMatch); // eslint-disable-line
+    summary.textContent = result.summary;
+
+    charName.textContent = resultsArray[i].name + endID;
+
+    avaBox.appendChild(avatar);
+    card.appendChild(avaBox);
+    card.appendChild(charName);
     card.appendChild(summary);
     previous.appendChild(card);
 }
