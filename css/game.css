@@ -6,6 +6,8 @@
     background-size: contain;
     position: relative;
     margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #story {
@@ -20,6 +22,10 @@
     left: 120px;
 }
 
+#encounter{
+    position: absolute;
+}
+
 #choices{
     width: fit-content;
     margin: auto;
@@ -27,29 +33,22 @@
 
 .village{
     background-image: url('../images/pixel-village.png');
-    background-repeat: no-repeat;
 }
 
 .forest{
     background-image: url('../images/pixel-forest.jpg');
-    background-repeat: repeat;
 }
 
 .field{
     background-image: url('../images/pixel-field.png');
-    background-repeat: repeat;
 }
 
 .room{
     background-image: url('../images/pixel-room.png');
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .cave{
     background-image: url('../images/pixel-cave.png');
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .death{

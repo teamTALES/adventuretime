@@ -132,6 +132,19 @@ button, label {
     display: none;
 }
 
+#disclaimer, #disclaimer p{
+    height: 130px;
+    width: 500px;
+    display: block;
+    align-self: center;
+    margin: 20px;
+}
+
+#disclaimer img{
+    float:left;
+    margin: -15px 10px 10px 10px;
+}
+
 .sj {
     width: 5px;
     height: 5px;
