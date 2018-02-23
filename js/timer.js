@@ -31,11 +31,11 @@ function randomSelection() {
         const randomNumber = Math.floor(Math.random() * random.length);
         game.player.choices += random[randomNumber]; // eslint-disable-line
         game.level++; // eslint-disable-line
-        game.endCheck(); // eslint-disable-line
         const countdown = document.getElementById('count100');
         countdown.style.width = '100%';
         secs = 30;
         timer();
+        game.endCheck(); // eslint-disable-line
     }
 }
 

@@ -1,4 +1,8 @@
-/* Game Page */
+/* Game Page
+1. Elements
+2. Nav
+3. Graphics */
+
 
 #consoleWindow{
     width: 500px;
@@ -41,36 +45,7 @@
     margin: auto;
 }
 
-.village{
-    background-image: url('../images/pixel-village.png');
-    background-color:#92cb9a;
-}
 
-.forest{
-    background-image: url('../images/pixel-forest.jpg');
-    background-color: #0d1305;
-}
-
-.field{
-    background-image: url('../images/pixel-field.png');
-}
-
-.room{
-    background-image: url('../images/pixel-room.png');
-    background-color: #28353c;
-
-}
-
-.cave{
-    background-image: url('../images/pixel-cave.png');
-    background-color: #473b7b;
-
-}
-
-.death{
-    background-color: black;
-    width: 500px;
-}
 /* 
 Floating Nav */
 
@@ -124,6 +99,39 @@ Floating Nav */
     from { opacity: 0; }
     to   { opacity: .85; }
 } 
+
+/* Graphics */
+
+.village{
+    background-image: url('../images/pixel-village.png');
+    background-color:#92cb9a;
+}
+
+.forest{
+    background-image: url('../images/pixel-forest.jpg');
+    background-color: #0d1305;
+}
+
+.field{
+    background-image: url('../images/pixel-field.png');
+}
+
+.room{
+    background-image: url('../images/pixel-room.png');
+    background-color: #28353c;
+
+}
+
+.cave{
+    background-image: url('../images/pixel-cave.png');
+    background-color: #473b7b;
+
+}
+
+.death{
+    background-color: black;
+    width: 500px;
+}
 
 /* Character images for the encounters during the game. */
 
