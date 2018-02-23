@@ -1,11 +1,11 @@
-let secs = 60;
+let secs = 30;
 let startLevel = 0;
 
 // On reload this timer delays the ticker function to give users time to read the story text.
 function timer() {
     startLevel = game.level; // eslint-disable-line
     console.log(startLevel);
-    setTimeout(ticker, 30000);
+    setTimeout(ticker, 60000);
 };
 timer();
 // Counts down the amount of time set and shrinks the counter bar.
@@ -30,7 +30,7 @@ function randomSelection() {
         game.endCheck(); // eslint-disable-line
         const countdown = document.getElementById('count100');
         countdown.style.width = '100%';
-        secs = 60;
+        secs = 30;
         timer();
     }
 }
