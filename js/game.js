@@ -1,7 +1,6 @@
 'use strict';
 
 const choices = document.getElementById('choices');
-const header = document.querySelector('header');
 const countdown = document.getElementById('count100');
 
 choices.a.addEventListener('click', function (){
@@ -68,7 +67,7 @@ const game = {
         if (this.encounter.className) {
             const current = this.encounter.className;
             this.encounter.classList.remove(current);
-        } 
+        }
         if (choice.encounter){
             this.encounter.className = choice.encounter;
         }
@@ -92,11 +91,11 @@ const game = {
             localStorage.setItem('gameInProgress', 'false');
             window.location.href = 'results.html';
         } else {
-            secs = 30;
+            secs = 30; // eslint-disable-line
             countdown.style.width = '100%';
 
-            timer();
-            game.reload(); 
+            timer(); // eslint-disable-line
+            game.reload();
         }
     },
 };
