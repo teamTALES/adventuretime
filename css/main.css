@@ -157,6 +157,8 @@ button, label {
 
 #disclaimer{
     display: inline-block;
+    height: 160px;
+
 }
 
 #resume{
@@ -164,7 +166,6 @@ button, label {
 }
 
 #disclaimer, #disclaimer p{
-    height: 130px;
     width: 500px;
     display: block;
     align-self: center;
