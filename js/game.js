@@ -78,6 +78,10 @@ const game = {
     },
 
     endCheck: function() {
+        seconds = 60;
+        secs = 30; // eslint-disable-line
+        countdown.style.width = '100%';
+        game.reload();
         if (game.level >= 3){
             if (localStorage.getItem('results')){
                 const resultsArray = JSON.parse(localStorage.getItem('results'));
@@ -90,12 +94,6 @@ const game = {
             localStorage.removeItem('settings');
             localStorage.setItem('gameInProgress', 'false');
             window.location.href = 'results.html';
-        } else {
-            secs = 60; // eslint-disable-line
-            countdown.style.width = '100%';
-
-            timer(); // eslint-disable-line
-            game.reload();
         }
     },
 };
