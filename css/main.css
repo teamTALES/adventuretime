@@ -117,7 +117,7 @@ button, label {
     animation-timing-function: steps(1, end);
 
 }
-@-webkit-keyframes blink {
+@keyframes blink {
     0% {opacity: 1;}
     60% {opacity: 0;}
     100% {opacity: 0;}
