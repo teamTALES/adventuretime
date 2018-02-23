@@ -1,5 +1,3 @@
-/* Results Page */
-
 #previous {
     display: flex;
     flex-wrap: wrap;
@@ -32,20 +30,21 @@
     display: inline-block;
 }
 
+/* eslint disable */
+
 .oldResult h3{
-    width: 60%;
+    width: 60%; 
     height: 20%;
     display: inline;
     margin: 0;
-
 }
-
 .oldResult h4{
     width: 60%;
     height: 50%;
     display: inline;
     margin: 0;
 }
+
 
 .leaderboardH1 {
     text-align: center;
