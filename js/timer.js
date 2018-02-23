@@ -1,10 +1,16 @@
 let secs = 30;
+let seconds = 60;
 let startLevel = 0;
 
 // On reload this timer delays the ticker function to give users time to read the story text.
 function timer() {
     startLevel = game.level; // eslint-disable-line
-    setTimeout(ticker, 60000);
+    seconds--;
+    if (seconds > 0) {
+        setTimeout(timer, 1000);
+    } else if (seconds === 0) {
+        ticker();
+    }
 };
 timer();
 // Counts down the amount of time set and shrinks the counter bar.
