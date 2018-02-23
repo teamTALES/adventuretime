@@ -149,3 +149,35 @@ Floating Nav */
 
     box-shadow: 9px 5px 0 #BC1111,10px 5px 0 #E74C3C,11px 5px 0 #E74C3C,8px 6px 0 #BC1111,9px 6px 0 #E74C3C,10px 6px 0 #F39C12,11px 6px 0 #BC1111,12px 6px 0 #BC1111,8px 7px 0 #BC1111,9px 7px 0 #BC1111,10px 7px 0 #E74C3C,11px 7px 0 #E74C3C,12px 7px 0 #BC1111,9px 8px 0 #BC1111,10px 8px 0 #BC1111,11px 8px 0 #BC1111,10px 9px 0 #BC1111,11px 9px 0 #52EB34,12px 9px 0 #35AD02,12px 10px 0 #52EB34,13px 10px 0 #35AD02,14px 10px 0 #35AD02,12px 11px 0 #52EB34,13px 11px 0 #52EB34,14px 11px 0 #35AD02,10px 12px 0 #35AD02,11px 12px 0 #35AD02,12px 12px 0 #52EB34,10px 13px 0 #52EB34,11px 13px 0 #35AD02,12px 13px 0 #52EB34,12px 14px 0 #52EB34,12px 15px 0 #52EB34,11px 16px 0 #52EB34,11px 17px 0 #52EB34;
 }
+
+/* Styling for the counter bar */
+
+#countdown {
+    width: 60%;
+    margin: 10px auto;
+    height: 22px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  
+  #count100 {
+    height: 100%;
+    padding: 0 10px;
+    width: 100%;
+    background-color: rgb(255, 8, 0);
+    box-sizing: border-box;
+  }
+
+  #count70 {
+    height: 100%;
+    padding: 0 10px;
+    width: 70%;
+    background-color: rgb(255, 8, 0);
+    box-sizing: border-box;
+  }
+  #count40 {
+    height: 100%;
+    padding: 0 10px;
+    width: 40%;
+    background-color: rgb(255, 8, 0);
+    box-sizing: border-box;
+  }
