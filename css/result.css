@@ -1,5 +1,12 @@
 /* Results Page */
 
+#previous {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .oldResult {
     width: 350px;
     height: 150px;
@@ -35,7 +42,78 @@
 
 .oldResult h4{
     width: 60%;
-    height: 80%;
+    height: 50%;
     display: inline;
     margin: 0;
+}
+
+.leaderboardH1 {
+    text-align: center;
+    font-family: 'Kurale', serif;
+    font-size: 2.8em;
+    color: white;
+    background-color: #ec2424;
+    padding: 20px;
+    border-radius: 80px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.nogames {
+    background-color: none;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#devs {
+    background-color: #ec2424;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 80px;
+    padding: 20px;
+    color: white;
+    font-family: 'Kurale', serif;
+}
+
+#specialthanks {
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: fit-content;
+    color: white;
+    background-color: #ec2424;
+    border-radius: 80px;
+    font-family: 'Kurale', serif;
+}
+
+#musiccredits {
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: fit-content;
+    color: white;
+    background-color: #ec2424;
+    border-radius: 80px;
+    font-family: 'Kurale', serif;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.win {
+    width: 60%;
+    height: 30%;
+    display: inline;
+    margin: 0;
+    color: green;
+}
+
+.lose {
+    width: 60%;
+    height: 30%;
+    display: inline;
+    margin: 0;
+    color: red;
 }

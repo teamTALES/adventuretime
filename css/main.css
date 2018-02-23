@@ -99,6 +99,7 @@ button, label {
     width: 500px;
     height: 410px;
     overflow: hidden;
+    background-color: #28353c;
     background-image: url("../images/pixel-room.png");
     background-repeat: no-repeat;
 }
@@ -125,9 +126,11 @@ button, label {
     font-family: '8BIT WONDER';
 
 }
+
 #disclaimer{
     display: inline-block;
 }
+
 #resume{
     display: none;
 }

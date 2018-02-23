@@ -25,6 +25,7 @@ const game = {
     consoleWindow: document.getElementById('consoleWindow'),
     header: document.querySelector('header'),
     title:  document.createElement('h1'),
+    encounter: document.getElementById('encounter'),
 
     start: function (){
         localStorage.setItem('gameInProgress','true');
@@ -62,6 +63,14 @@ const game = {
         choices.b.innerText = choice.bButton;
 
         this.consoleWindow.className = choice.bg;
+
+        if (this.encounter.className) {
+            const current = this.encounter.className;
+            this.encounter.classList.remove(current);
+        } 
+        if (choice.encounter){
+            this.encounter.className = choice.encounter;
+        }
 
         this.title.textContent = 'Chapter ' + (this.level + 1);
         this.title.className = 'chapterTitles';
