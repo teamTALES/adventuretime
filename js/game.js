@@ -41,6 +41,7 @@ const game = {
 
         this.avatar.className = this.player.character;
         this.title.textContent = 'Chapter 1';
+        this.title.className = 'chapterTitles';
         this.header.appendChild(this.title);
     },
 
@@ -63,6 +64,7 @@ const game = {
         this.consoleWindow.className = choice.bg;
 
         this.title.textContent = 'Chapter ' + (this.level + 1);
+        this.title.className = 'chapterTitles';
         this.header.appendChild(this.title);
     },
 

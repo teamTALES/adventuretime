@@ -35,50 +35,15 @@ const text = document.getElementById('story');
 text.innerHTML = result.story;
 consoleWindow.className = result.bg;
 
-for (let i = 0; i < resultsArray.length; i++){
-    const previous = document.getElementById('previous');
-
-    const card = document.createElement('div');
-    card.className = 'oldResult';
-    // card.appendChild('img');
-    const charName = document.createElement('h3');
-    const summary = document.createElement('h4');
-    const endID = resultsArray[i].choices.concat(resultsArray[i].choices.length);
-
-    const avaBox = document.createElement('div');
-    const avatar = document.createElement('div');
-
-    avaBox.className = 'avaBox';
-    avatar.className = resultsArray[i].character;
-
-    function isMatch(array){
-        return array.name === endID;
-    }
-
-    const result = script.find(isMatch); // eslint-disable-line
-    summary.textContent = result.summary;
-
-    charName.textContent = resultsArray[i].name + endID;
-
-    avaBox.appendChild(avatar);
-    card.appendChild(avaBox);
-    card.appendChild(charName);
-    card.appendChild(summary);
-    previous.appendChild(card);
-}
-
-const nav = document.querySelector('nav');
+const nav = document.getElementById('buttons');
 nav.addEventListener('click', function(){
     console.log(event.target.id);
-    if (event.target.id === 'leaderboard'){
-        //
-    } else if (event.target.id === 'restart'){
+    if (event.target.id === 'restart'){
         window.location.href = 'index.html';
     } else if (event.target.id === 'credits'){
-
+        window.location.href = 'leaderboard-credits.html';
     }
 });
-
 
 const mutebutton = document.getElementById('mute');  // mute control for navigation bar
 const musicplayer = document.getElementById('music');
