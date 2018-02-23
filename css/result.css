@@ -35,7 +35,7 @@
 
 .oldResult h4{
     width: 60%;
-    height: 80%;
+    height: 50%;
     display: inline;
     margin: 0;
 }
@@ -93,4 +93,20 @@ h1, h2 {
     font-family: 'Kurale', serif;
     text-align: center;
     padding-bottom: 5px;
+}
+
+.win {
+    width: 60%;
+    height: 30%;
+    display: inline;
+    margin: 0;
+    color: green;
+}
+
+.lose {
+    width: 60%;
+    height: 30%;
+    display: inline;
+    margin: 0;
+    color: red;
 }

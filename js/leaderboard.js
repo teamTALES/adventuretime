@@ -7,9 +7,9 @@ if (localStorage.getItem('results')) {
 
         const card = document.createElement('div');
         card.className = 'oldResult';
-        // card.appendChild('img');
         const charName = document.createElement('h3');
         const summary = document.createElement('h4');
+        const winOrLose = document.createElement('h3');
         const endID = resultsArray[i].choices.concat(resultsArray[i].choices.length);
 
         const avaBox = document.createElement('div');
@@ -24,13 +24,21 @@ if (localStorage.getItem('results')) {
 
     const result = script.find(isMatch); // eslint-disable-line
         summary.textContent = result.summary;
-
-        charName.textContent = resultsArray[i].name + endID;
+        charName.textContent = resultsArray[i].name;
+        
+        if (result.bg === 'room') {
+            winOrLose.textContent = 'WINNER';
+            winOrLose.className = 'win';
+        } else {
+            winOrLose.textContent = 'LOSER';
+            winOrLose.className = 'lose';
+        }
 
         avaBox.appendChild(avatar);
         card.appendChild(avaBox);
         card.appendChild(charName);
         card.appendChild(summary);
+        card.appendChild(winOrLose);
         previous.appendChild(card);
     }
 } else {
