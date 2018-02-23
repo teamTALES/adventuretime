@@ -91,7 +91,7 @@ const game = {
             localStorage.setItem('gameInProgress', 'false');
             window.location.href = 'results.html';
         } else {
-            secs = 60; // eslint-disable-line
+            secs = 30; // eslint-disable-line
             countdown.style.width = '100%';
 
             timer(); // eslint-disable-line
