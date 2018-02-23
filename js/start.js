@@ -12,7 +12,6 @@ const player = {
     choices: '',
 };
 
-
 if (localStorage.getItem('settings')){
     resume.setAttribute('style', 'display: inline-block');
 }
@@ -32,12 +31,12 @@ introForm.addEventListener('submit', function(){
 
     player.name = this['character'].value;
 
-    if (player.character){
+    if (player.character === '' || player.character === 'chooseAvatar'){
+        document.getElementById('error').textContent = 'Please select a character!';
+    } else {
         localStorage.setItem('settings', JSON.stringify(player));
         localStorage.setItem('gameInProgress', 'true');
         window.location.href = 'game.html';
-    } else {
-        document.getElementById('error').textContent = 'Please select a character!';
     }
 });
 
