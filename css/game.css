@@ -128,9 +128,15 @@ Floating Nav */
 }
 
 .mirror {
+    top: 140px !important;
+    left: 480px !important;
     width: 5px;
     height: 5px;
     
+    -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari */
+    transform: rotate(20deg);
+
     box-shadow: 65px 25px 0 #FFF70F,70px 25px 0 #FFF70F,60px 30px 0 #FFF70F,65px 30px 0 #E7E7E7,70px 30px 0 #E7E7E7,75px 30px 0 #FFF70F,55px 35px 0 #FFF70F,60px 35px 0 #E7E7E7,65px 35px 0 #E7E7E7,70px 35px 0 #E7E7E7,75px 35px 0 #E7E7E7,80px 35px 0 #FFF70F,55px 40px 0 #FFF70F,60px 40px 0 #E7E7E7,65px 40px 0 #E7E7E7,70px 40px 0 #E7E7E7,75px 40px 0 #E7E7E7,80px 40px 0 #B6B6B6,85px 40px 0 #FFF70F,50px 45px 0 #FFF70F,55px 45px 0 #FFF70F,60px 45px 0 #E7E7E7,65px 45px 0 #E7E7E7,70px 45px 0 #E7E7E7,75px 45px 0 #B6B6B6,80px 45px 0 #E7E7E7,85px 45px 0 #FFF70F,90px 45px 0 #FFF70F,50px 50px 0 #FFF70F,55px 50px 0 #E7E7E7,60px 50px 0 #E7E7E7,65px 50px 0 #E7E7E7,70px 50px 0 #B6B6B6,75px 50px 0 #E7E7E7,80px 50px 0 #E7E7E7,85px 50px 0 #FFF70F,90px 50px 0 #FFF70F,95px 50px 0 #DBDB0F,50px 55px 0 #FFF70F,55px 55px 0 #E7E7E7,60px 55px 0 #E7E7E7,65px 55px 0 #B6B6B6,70px 55px 0 #E7E7E7,75px 55px 0 #E7E7E7,80px 55px 0 #B6B6B6,85px 55px 0 #B6B6B6,90px 55px 0 #FFF70F,95px 55px 0 #DBDB0F,50px 60px 0 #FFF70F,55px 60px 0 #E7E7E7,60px 60px 0 #B6B6B6,65px 60px 0 #E7E7E7,70px 60px 0 #E7E7E7,75px 60px 0 #B6B6B6,80px 60px 0 #B6B6B6,85px 60px 0 #E7E7E7,90px 60px 0 #FFF70F,95px 60px 0 #DBDB0F,50px 65px 0 #FFF70F,55px 65px 0 #B6B6B6,60px 65px 0 #E7E7E7,65px 65px 0 #E7E7E7,70px 65px 0 #B6B6B6,75px 65px 0 #B6B6B6,80px 65px 0 #E7E7E7,85px 65px 0 #E7E7E7,90px 65px 0 #FFF70F,95px 65px 0 #DBDB0F,50px 70px 0 #FFF70F,55px 70px 0 #E7E7E7,60px 70px 0 #E7E7E7,65px 70px 0 #B6B6B6,70px 70px 0 #B6B6B6,75px 70px 0 #E7E7E7,80px 70px 0 #E7E7E7,85px 70px 0 #E7E7E7,90px 70px 0 #FFF70F,95px 70px 0 #DBDB0F,50px 75px 0 #FFF70F,55px 75px 0 #FFF70F,60px 75px 0 #B6B6B6,65px 75px 0 #B6B6B6,70px 75px 0 #E7E7E7,75px 75px 0 #E7E7E7,80px 75px 0 #E7E7E7,85px 75px 0 #FFF70F,90px 75px 0 #FFF70F,55px 80px 0 #FFF70F,60px 80px 0 #B6B6B6,65px 80px 0 #E7E7E7,70px 80px 0 #E7E7E7,75px 80px 0 #E7E7E7,80px 80px 0 #E7E7E7,85px 80px 0 #FFF70F,90px 80px 0 #DBDB0F,55px 85px 0 #FFF70F,60px 85px 0 #E7E7E7,65px 85px 0 #E7E7E7,70px 85px 0 #E7E7E7,75px 85px 0 #E7E7E7,80px 85px 0 #E7E7E7,85px 85px 0 #FFF70F,90px 85px 0 #DBDB0F,55px 90px 0 #FFF70F,60px 90px 0 #E7E7E7,65px 90px 0 #E7E7E7,70px 90px 0 #E7E7E7,75px 90px 0 #E7E7E7,80px 90px 0 #FFF70F,60px 95px 0 #FFF70F,65px 95px 0 #E7E7E7,70px 95px 0 #E7E7E7,75px 95px 0 #FFF70F,65px 100px 0 #FFF70F,70px 100px 0 #FFF70F;
 }
 .doors {
