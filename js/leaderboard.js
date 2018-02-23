@@ -36,4 +36,5 @@ if (localStorage.getItem('results')) {
 } else {
     const leaderboardH1 = document.getElementById('leaderH1');
     leaderboardH1.textContent = '';
+    leaderboardH1.setAttribute('class', 'nogames');
 }

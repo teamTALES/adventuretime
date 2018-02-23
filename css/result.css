@@ -49,4 +49,16 @@
 
 .leaderboardH1 {
     text-align: center;
+    font-family: 'Kurale', serif;
+    font-size: 2.8em;
+    color: white;
+    background-color: #ec2424;
+    padding: 20px;
+    border-radius: 80px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.nogames {
+    background-color: none;
 }
