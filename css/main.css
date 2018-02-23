@@ -99,13 +99,33 @@ button, label {
     width: 500px;
     height: 410px;
     overflow: hidden;
+    background-color: #28353c;
     background-image: url("../images/pixel-room.png");
     background-repeat: no-repeat;
 }
+#chooseChar {
+    margin: 20% 10% 5% 10%;
+    text-align: center;
+    font-family: '8BIT WONDER';
+    font-size: 1em;
+    color: red;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps(1, end);
+
+}
+@-webkit-keyframes blink {
+    0% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+  }
 
 .pick {
     display: inline-block;
-    margin-top: 42%;
+    margin-top: 10%;
     width: 150px;
     height: 150px;
     position: relative;
@@ -125,11 +145,26 @@ button, label {
     font-family: '8BIT WONDER';
 
 }
+
 #disclaimer{
     display: inline-block;
 }
+
 #resume{
     display: none;
+}
+
+#disclaimer, #disclaimer p{
+    height: 130px;
+    width: 500px;
+    display: block;
+    align-self: center;
+    margin: 20px;
+}
+
+#disclaimer img{
+    float:left;
+    margin: -15px 10px 10px 10px;
 }
 
 .sj {
