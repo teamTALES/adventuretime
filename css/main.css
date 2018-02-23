@@ -35,6 +35,10 @@ body {
     padding: 30px 50px 60px 70px;
 }
 
+p{
+    font-size: 1.2em;
+}
+
 header{
     text-align: center;
     margin-top: 5%;
@@ -155,15 +159,16 @@ button, label {
 }
 
 #disclaimer, #disclaimer p{
-    height: 130px;
+    height: 150px;
     width: 500px;
     display: block;
     align-self: center;
-    margin: 20px;
+    margin: 20px 0px 40px 0px;
 }
 
 #disclaimer img{
     float:left;
+    padding: 20px 0px;
     margin: -15px 10px 10px 10px;
 }
 

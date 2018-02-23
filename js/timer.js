@@ -1,4 +1,4 @@
-let secs = 30;
+let secs = 60;
 let startLevel = 0;
 
 // On reload this timer delays the ticker function to give users time to read the story text.
@@ -30,7 +30,7 @@ function randomSelection() {
         game.endCheck(); // eslint-disable-line
         const countdown = document.getElementById('count100');
         countdown.style.width = '100%';
-        secs = 30;
+        secs = 60;
         timer();
     }
 }
