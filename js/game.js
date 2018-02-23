@@ -67,7 +67,7 @@ const game = {
     },
 
     endCheck: function() {
-        if (game.level >= 2){
+        if (game.level >= 3){
             if (localStorage.getItem('results')){
                 const resultsArray = JSON.parse(localStorage.getItem('results'));
                 resultsArray.push(game.player);
