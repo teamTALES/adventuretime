@@ -1,13 +1,17 @@
 /* Game Page */
 
 #consoleWindow{
-    width: 734px;
+    width: 500px;
     height: 288px;
     background-size: contain;
     position: relative;
     margin: auto;
     background-position: center;
     background-repeat: no-repeat;
+
+    border: 15px solid rgb(180, 115, 17);
+    border-style: double;
+    border-radius: 200px 200px 0px 0px;
 }
 
 #story {
@@ -18,14 +22,14 @@
 
 #avatar{
     position: absolute;
-    top: 120px;
-    left: 120px;
+    top: 130px;
+    left: 110px;
 }
 
 #encounter{
     position: absolute;
-    top: 120px;
-    left: 410px;
+    top: 130px;
+    left: 270px;
 }
 
 #choices{
@@ -35,10 +39,12 @@
 
 .village{
     background-image: url('../images/pixel-village.png');
+    background-color:#92cb9a;
 }
 
 .forest{
     background-image: url('../images/pixel-forest.jpg');
+    background-color: #0d1305;
 }
 
 .field{
@@ -47,6 +53,8 @@
 
 .room{
     background-image: url('../images/pixel-room.png');
+    background-color: #28353c;
+
 }
 
 .cave{
@@ -56,6 +64,7 @@
 
 .death{
     background-color: black;
+    width: 500px;
 }
 /* 
 Floating Nav */
@@ -116,6 +125,9 @@ Floating Nav */
 .oldMan {
     height: 5px;
     width: 5px;
+
+    top: 70px !important;
+    left: 395px !important;
     
   box-shadow: 65px 5px 0 #595959,70px 10px 0 #595959,65px 15px 0 #595959,70px 20px 0 #595959,65px 25px 0 #595959,70px 25px 0 #595959,75px 25px 0 #595959,60px 30px 0 #595959,70px 30px 0 #595959,80px 30px 0 #595959,55px 35px 0 #595959,70px 35px 0 #595959,85px 35px 0 #595959,55px 40px 0 #595959,60px 40px 0 #FFFFFF,65px 40px 0 #FFFFFF,70px 40px 0 #595959,85px 40px 0 #595959,55px 45px 0 #DBAE6B,60px 45px 0 #DBAE6B,65px 45px 0 #DBAE6B,70px 45px 0 #595959,85px 45px 0 #595959,55px 50px 0 #DBAE6B,60px 50px 0 #DBAE6B,65px 50px 0 #DBAE6B,70px 50px 0 #595959,85px 50px 0 #595959,55px 55px 0 #FFFFFF,60px 55px 0 #FFFFFF,65px 55px 0 #FFFFFF,70px 55px 0 #595959,85px 55px 0 #595959,20px 60px 0 #C4C4C4,25px 60px 0 #C4C4C4,55px 60px 0 #595959,60px 60px 0 #FFFFFF,65px 60px 0 #FFFFFF,70px 60px 0 #595959,75px 60px 0 #C4C4C4,85px 60px 0 #595959,20px 65px 0 #C4C4C4,25px 65px 0 #C4C4C4,30px 65px 0 #DBAE6B,35px 65px 0 #BA945B,40px 65px 0 #BA945B,45px 65px 0 #DBAE6B,50px 65px 0 #DBAE6B,55px 65px 0 #595959,60px 65px 0 #FFFFFF,65px 65px 0 #C4C4C4,70px 65px 0 #595959,75px 65px 0 #C4C4C4,85px 65px 0 #595959,50px 70px 0 #595959,60px 70px 0 #C4C4C4,65px 70px 0 #C4C4C4,70px 70px 0 #DBAE6B,75px 70px 0 #C4C4C4,80px 70px 0 #C4C4C4,85px 70px 0 #595959,55px 75px 0 #595959,60px 75px 0 #C4C4C4,65px 75px 0 #828282,70px 75px 0 #595959,75px 75px 0 #DBAE6B,80px 75px 0 #C4C4C4,85px 75px 0 #595959,55px 80px 0 #595959,60px 80px 0 #C4C4C4,65px 80px 0 #C4C4C4,70px 80px 0 #595959,75px 80px 0 #C4C4C4,80px 80px 0 #C4C4C4,85px 80px 0 #595959,55px 85px 0 #595959,60px 85px 0 #C4C4C4,65px 85px 0 #C4C4C4,70px 85px 0 #595959,75px 85px 0 #828282,80px 85px 0 #C4C4C4,85px 85px 0 #595959,50px 90px 0 #C4C4C4,55px 90px 0 #595959,60px 90px 0 #C4C4C4,65px 90px 0 #C4C4C4,70px 90px 0 #595959,75px 90px 0 #C4C4C4,80px 90px 0 #C4C4C4,85px 90px 0 #595959,50px 95px 0 #595959,55px 95px 0 #595959,60px 95px 0 #DBAE6B,65px 95px 0 #DBAE6B,70px 95px 0 #595959,75px 95px 0 #C4C4C4,80px 95px 0 #C4C4C4,85px 95px 0 #595959,90px 95px 0 #595959,50px 100px 0 #BA945B,55px 100px 0 #595959,60px 100px 0 #DBAE6B,65px 100px 0 #C4C4C4,70px 100px 0 #595959,75px 100px 0 #C4C4C4,80px 100px 0 #595959,85px 100px 0 #595959,50px 105px 0 #DBAE6B,60px 105px 0 #BA945B,65px 105px 0 #595959,70px 105px 0 #595959,75px 105px 0 #595959,50px 110px 0 #DBAE6B,60px 110px 0 #DBAE6B,50px 115px 0 #DBAE6B,60px 115px 0 #DBAE6B,60px 120px 0 #DBAE6B;
 }
@@ -128,8 +140,8 @@ Floating Nav */
 }
 
 .mirror {
-    top: 140px !important;
-    left: 480px !important;
+    top: 130px !important;
+    left: 365px !important;
     width: 5px;
     height: 5px;
     
@@ -152,10 +164,51 @@ Floating Nav */
     box-shadow: 80px 30px 0 #9E6E26,80px 35px 0 #9E6E26,60px 40px 0 #BC8322,65px 40px 0 #BC8322,70px 40px 0 #9E6E26,75px 40px 0 #9E6E26,80px 40px 0 #9E6E26,55px 45px 0 #BC8322,60px 45px 0 #BC8322,65px 45px 0 #BC8322,70px 45px 0 #BC8322,75px 45px 0 #BC8322,80px 45px 0 #9E6E26,80px 50px 0 #9E6E26,85px 50px 0 #9E6E26,90px 50px 0 #9E6E26,95px 50px 0 #BC8322,80px 55px 0 #9E6E26,85px 55px 0 #BC8322,90px 55px 0 #BC8322,95px 55px 0 #BC8322,100px 55px 0 #BC8322,105px 55px 0 #BC8322,80px 60px 0 #9E6E26,80px 65px 0 #785324,80px 70px 0 #9E6E26,80px 75px 0 #785324,80px 80px 0 #785324,80px 85px 0 #785324,80px 90px 0 #785324,80px 95px 0 #785324,80px 100px 0 #785324,80px 105px 0 #785324;
 }
 .rose {
-    top: 220px !important;
-    left: 440px !important;
+    top: 210px !important;
+    left: 230px !important;
     width: 2px;
     height: 2px;
 
+    -ms-transform: scale(2.2); /* IE 9 */
+    -webkit-transform: scale(2.2); /* Safari */
+    transform: scale(2.2);
+
     box-shadow: 9px 5px 0 #BC1111,10px 5px 0 #E74C3C,11px 5px 0 #E74C3C,8px 6px 0 #BC1111,9px 6px 0 #E74C3C,10px 6px 0 #F39C12,11px 6px 0 #BC1111,12px 6px 0 #BC1111,8px 7px 0 #BC1111,9px 7px 0 #BC1111,10px 7px 0 #E74C3C,11px 7px 0 #E74C3C,12px 7px 0 #BC1111,9px 8px 0 #BC1111,10px 8px 0 #BC1111,11px 8px 0 #BC1111,10px 9px 0 #BC1111,11px 9px 0 #52EB34,12px 9px 0 #35AD02,12px 10px 0 #52EB34,13px 10px 0 #35AD02,14px 10px 0 #35AD02,12px 11px 0 #52EB34,13px 11px 0 #52EB34,14px 11px 0 #35AD02,10px 12px 0 #35AD02,11px 12px 0 #35AD02,12px 12px 0 #52EB34,10px 13px 0 #52EB34,11px 13px 0 #35AD02,12px 13px 0 #52EB34,12px 14px 0 #52EB34,12px 15px 0 #52EB34,11px 16px 0 #52EB34,11px 17px 0 #52EB34;
 }
+
+.room #avatar{
+    top: 150px !important;
+    left: 180px !important;
+}
+
+.field #avatar{
+    left: 210px !important;
+}
+
+.village #avatar{
+    left: 240px !important;
+}
+
+.death #avatar{
+    top: 140px !important;
+    left: 180px !important;
+
+    margin: 0px;
+
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+    -webkit-transform-origin: 70px;
+    -moz-transform-origin: 70px;
+    -o-transform-origin: 70px;
+    transform-origin: 70px;
+    width: 5px;
+    height: 5px;
+}
+
+@-moz-keyframes 
+spin { 100% { -moz-transform: rotate(360deg);} }
+@-webkit-keyframes 
+spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes 
+spin { 100% { transform:rotate(360deg);} }
