@@ -67,16 +67,37 @@ h1, h2 {
     text-align: center;
 }
 
-#devs, #specialthanks {
+#devs {
     background-color: #ec2424;
     width: fit-content;
     margin: 0 auto;
+    margin-top: 10px;
     border-radius: 80px;
     padding: 20px;
     color: white;
+    font-family: 'Kurale', serif;
 }
 
 #specialthanks {
-    margin-top: 10px;
     padding: 10px;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: fit-content;
+    color: white;
+    background-color: #ec2424;
+    border-radius: 80px;
+    font-family: 'Kurale', serif;
+}
+
+#musiccredits {
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: fit-content;
+    color: white;
+    background-color: #ec2424;
+    border-radius: 80px;
+    font-family: 'Kurale', serif;
+    text-align: center;
+    padding-bottom: 5px;
 }
