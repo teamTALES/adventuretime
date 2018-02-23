@@ -75,6 +75,7 @@ const game = {
         this.title.textContent = 'Chapter ' + (this.level + 1);
         this.title.className = 'chapterTitles';
         this.header.appendChild(this.title);
+        scroll(0,0);
     },
 
     endCheck: function() {
