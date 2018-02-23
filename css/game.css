@@ -8,13 +8,10 @@
     margin: auto;
     background-position: center;
     background-repeat: no-repeat;
-<<<<<<< HEAD
-=======
 
     border: 15px solid rgb(180, 115, 17);
     border-style: double;
     border-radius: 200px 200px 0px 0px;
->>>>>>> 61cb9771f30b44c72b9b3848eef3c2193ed8bae6
 }
 
 #story {
@@ -46,18 +43,12 @@
 
 .village{
     background-image: url('../images/pixel-village.png');
-<<<<<<< HEAD
-=======
     background-color:#92cb9a;
->>>>>>> 61cb9771f30b44c72b9b3848eef3c2193ed8bae6
 }
 
 .forest{
     background-image: url('../images/pixel-forest.jpg');
-<<<<<<< HEAD
-=======
     background-color: #0d1305;
->>>>>>> 61cb9771f30b44c72b9b3848eef3c2193ed8bae6
 }
 
 .field{
@@ -66,20 +57,14 @@
 
 .room{
     background-image: url('../images/pixel-room.png');
-<<<<<<< HEAD
-=======
     background-color: #28353c;
 
->>>>>>> 61cb9771f30b44c72b9b3848eef3c2193ed8bae6
 }
 
 .cave{
     background-image: url('../images/pixel-cave.png');
-<<<<<<< HEAD
-=======
     background-color: #473b7b;
 
->>>>>>> 61cb9771f30b44c72b9b3848eef3c2193ed8bae6
 }
 
 .death{

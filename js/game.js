@@ -2,12 +2,13 @@
 
 const choices = document.getElementById('choices');
 const header = document.querySelector('header');
+const countdown = document.getElementById('count100');
 
 choices.a.addEventListener('click', function (){
     game.player.choices += 'A';
     game.level++;
-    game.endCheck();
 
+    game.endCheck();
 });
 
 choices.b.addEventListener('click', function (){
@@ -91,7 +92,11 @@ const game = {
             localStorage.setItem('gameInProgress', 'false');
             window.location.href = 'results.html';
         } else {
-            game.reload();
+            secs = 30;
+            countdown.style.width = '100%';
+
+            timer();
+            game.reload(); 
         }
     },
 };
