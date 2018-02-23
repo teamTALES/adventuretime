@@ -92,7 +92,7 @@ const game = {
             localStorage.setItem('gameInProgress', 'false');
             window.location.href = 'results.html';
         } else {
-            seoncds = 60;  // eslint-disable-line
+            seconds = 60;  // eslint-disable-line
             secs = 30; // eslint-disable-line
             countdown.style.width = '100%';
 
