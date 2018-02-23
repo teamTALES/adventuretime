@@ -6,10 +6,11 @@
         <link rel="stylesheet" id='css' href="css/main.css">
         <link rel="stylesheet" href="css/game.css">
         <link rel="stylesheet" href="css/result.css">
+        <link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet">
     </head>
     <body>
         <header>
-                <h1 class="chapterTitles"> Game Title </h1>
+            <h1 class="chapterTitles">Book of Doors</h1>
         </header>
         <section id="consoleWindow" class="room">
             <div id= "avatar"></div>
@@ -20,21 +21,16 @@
             </section>
         </main>
         
-        <nav>
-            <audio autoplay loop id="music"></audio>
-            <br>
-            <button type="button" id="leaderboard">Leaderboard</button>
+        <section id="buttons">
             <button type="button" id="restart">Restart</button>
             <button type="button" id="credits">Credits</button>
-        </nav>
-        <section id="previous">
-
         </section>
         <div class="navigation">
             <img src="images/mute.png" id="mute" title="Mute">
             <a href="index.html"><img src="images/home.png" id="home" title="Main"></a>
             <a href="leaderboard-credits.html"><img src="images/results.png" id="resultsicon" title="Leaderboard/Credits"></a>
         </div>
+        <audio autoplay loop id="music"></audio>
         <script src="js/story.js"></script>
         <script src="js/results.js"></script>
     </body>

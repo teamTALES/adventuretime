@@ -41,6 +41,7 @@ const game = {
 
         this.avatar.className = this.player.character;
         this.title.textContent = 'Chapter 1';
+        this.title.className = 'chapterTitles';
         this.header.appendChild(this.title);
     },
 
@@ -63,11 +64,12 @@ const game = {
         this.consoleWindow.className = choice.bg;
 
         this.title.textContent = 'Chapter ' + (this.level + 1);
+        this.title.className = 'chapterTitles';
         this.header.appendChild(this.title);
     },
 
     endCheck: function() {
-        if (game.level >= 2){
+        if (game.level >= 3){
             if (localStorage.getItem('results')){
                 const resultsArray = JSON.parse(localStorage.getItem('results'));
                 resultsArray.push(game.player);
