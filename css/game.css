@@ -46,6 +46,12 @@
     background-repeat: no-repeat;
 }
 
+.cave{
+    background-image: url('../images/pixel-cave.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .death{
     background-color: black;
 }
