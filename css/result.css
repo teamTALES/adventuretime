@@ -62,3 +62,16 @@
 .nogames {
     background-color: none;
 }
+
+h1, h2 {
+    text-align: center;
+}
+
+#devs {
+    background-color: #ec2424;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 80px;
+    padding: 20px;
+    color: white;
+}
