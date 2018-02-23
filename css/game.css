@@ -6,6 +6,8 @@
     background-size: contain;
     position: relative;
     margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #story {
@@ -20,6 +22,12 @@
     left: 120px;
 }
 
+#encounter{
+    position: absolute;
+    top: 120px;
+    left: 410px;
+}
+
 #choices{
     width: fit-content;
     margin: auto;
@@ -27,29 +35,23 @@
 
 .village{
     background-image: url('../images/pixel-village.png');
-    background-repeat: no-repeat;
 }
 
 .forest{
     background-image: url('../images/pixel-forest.jpg');
-    background-repeat: repeat;
 }
 
 .field{
     background-image: url('../images/pixel-field.png');
-    background-repeat: repeat;
 }
 
 .room{
     background-image: url('../images/pixel-room.png');
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .cave{
     background-image: url('../images/pixel-cave.png');
-    background-position: center;
-    background-repeat: no-repeat;
+
 }
 
 .death{
@@ -144,6 +146,8 @@ Floating Nav */
     box-shadow: 80px 30px 0 #9E6E26,80px 35px 0 #9E6E26,60px 40px 0 #BC8322,65px 40px 0 #BC8322,70px 40px 0 #9E6E26,75px 40px 0 #9E6E26,80px 40px 0 #9E6E26,55px 45px 0 #BC8322,60px 45px 0 #BC8322,65px 45px 0 #BC8322,70px 45px 0 #BC8322,75px 45px 0 #BC8322,80px 45px 0 #9E6E26,80px 50px 0 #9E6E26,85px 50px 0 #9E6E26,90px 50px 0 #9E6E26,95px 50px 0 #BC8322,80px 55px 0 #9E6E26,85px 55px 0 #BC8322,90px 55px 0 #BC8322,95px 55px 0 #BC8322,100px 55px 0 #BC8322,105px 55px 0 #BC8322,80px 60px 0 #9E6E26,80px 65px 0 #785324,80px 70px 0 #9E6E26,80px 75px 0 #785324,80px 80px 0 #785324,80px 85px 0 #785324,80px 90px 0 #785324,80px 95px 0 #785324,80px 100px 0 #785324,80px 105px 0 #785324;
 }
 .rose {
+    top: 220px !important;
+    left: 440px !important;
     width: 2px;
     height: 2px;
 
