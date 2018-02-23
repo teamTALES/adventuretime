@@ -94,6 +94,7 @@ const game = {
         } else {
             secs = 30; // eslint-disable-line
             countdown.style.width = '100%';
+            window.clearTimeout(timeoutIDs);
 
             timer(); // eslint-disable-line
             game.reload();

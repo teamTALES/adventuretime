@@ -4,7 +4,6 @@ let startLevel = 0;
 // On reload this timer delays the ticker function to give users time to read the story text.
 function timer() {
     startLevel = game.level; // eslint-disable-line
-    console.log(startLevel);
     setTimeout(ticker, 60000);
 };
 timer();
@@ -18,7 +17,6 @@ function ticker() {
         randomSelection();
     }
 };
-ticker();
 // Randomly selects the new page if user does not click on a choice before the counter runs out.
 function randomSelection() {
     const currentLevel = game.level; // eslint-disable-line
@@ -27,11 +25,11 @@ function randomSelection() {
         const randomNumber = Math.floor(Math.random() * random.length);
         game.player.choices += random[randomNumber]; // eslint-disable-line
         game.level++; // eslint-disable-line
-        game.endCheck(); // eslint-disable-line
         const countdown = document.getElementById('count100');
         countdown.style.width = '100%';
         secs = 30;
         timer();
+        game.endCheck(); // eslint-disable-line
     }
 }
 
