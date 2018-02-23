@@ -232,77 +232,110 @@ Floating Nav */
     box-shadow: 9px 5px 0 #BC1111,10px 5px 0 #E74C3C,11px 5px 0 #E74C3C,8px 6px 0 #BC1111,9px 6px 0 #E74C3C,10px 6px 0 #F39C12,11px 6px 0 #BC1111,12px 6px 0 #BC1111,8px 7px 0 #BC1111,9px 7px 0 #BC1111,10px 7px 0 #E74C3C,11px 7px 0 #E74C3C,12px 7px 0 #BC1111,9px 8px 0 #BC1111,10px 8px 0 #BC1111,11px 8px 0 #BC1111,10px 9px 0 #BC1111,11px 9px 0 #52EB34,12px 9px 0 #35AD02,12px 10px 0 #52EB34,13px 10px 0 #35AD02,14px 10px 0 #35AD02,12px 11px 0 #52EB34,13px 11px 0 #52EB34,14px 11px 0 #35AD02,10px 12px 0 #35AD02,11px 12px 0 #35AD02,12px 12px 0 #52EB34,10px 13px 0 #52EB34,11px 13px 0 #35AD02,12px 13px 0 #52EB34,12px 14px 0 #52EB34,12px 15px 0 #52EB34,11px 16px 0 #52EB34,11px 17px 0 #52EB34;
 }
 
-.room #avatar{
-    top: 150px !important;
-    left: 180px !important;
-}
+/* Styling for the counter bar */
 
-.field #avatar{
-    left: 150px !important;
-}
+#countdown {
+    width: 60%;
+    margin: 10px auto;
+    height: 22px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  
+  #count100 {
+    height: 100%;
+    padding: 0 10px;
+    width: 100%;
+    background-color: rgb(255, 8, 0);
+    box-sizing: border-box;
+  }
 
-.village #avatar{
-    left: 240px !important;
-}
+  #count70 {
+    height: 100%;
+    padding: 0 10px;
+    width: 70%;
+    background-color: rgb(255, 8, 0);
+    box-sizing: border-box;
+  }
+  #count40 {
+    height: 100%;
+    padding: 0 10px;
+    width: 40%;
+    background-color: rgb(255, 8, 0);
+    box-sizing: border-box;
+  }
 
-.cave #avatar{
-    top: 130px !important;
-}
+/* Elements and animations for encounters on the game console screen. */  
+    .room #avatar{
+        top: 150px !important;
+        left: 180px !important;
+    }
 
-.death #avatar{
-    top: 140px !important;
-    left: 110px !important;
+    .field #avatar{
+        left: 150px !important;
+    }
 
-    margin: 0px;
+    .village #avatar{
+        left: 240px !important;
+    }
 
-    -webkit-animation:spin 4s linear infinite;
-    -ms-animation: spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    -o-animation: spin 4s linear infinite;
-    animation:spin 4s linear infinite;
-    -webkit-transform-origin: 70px;
-    -ms-transform-origin: 70px;
-    -moz-transform-origin: 70px;
-    -o-transform-origin: 70px;
-    transform-origin: 70px;
-    width: 5px;
-    height: 5px;
-}
+    .cave #avatar{
+        top: 130px !important;
+    }
 
-@-moz-keyframes 
-spin { 100% { -moz-transform: rotate(360deg);} }
-@-moz-keyframes 
-mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
-}
-@-moz-keyframes 
-swing {
-    0% { transform: rotate(3deg); }
-    100% { transform: rotate(-3deg); }
-}
+    .death #avatar{
+        top: 140px !important;
+        left: 110px !important;
 
-@-webkit-keyframes 
-spin { 100% { -webkit-transform: rotate(360deg); } }
-@-webkit-keyframes 
-mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
-}
-@-moz-keyframes 
-swing {
-    0% { transform: rotate(3deg); }
-    100% { transform: rotate(-3deg); }
-}
+        margin: 0px;
 
-@keyframes 
-spin { 100% { transform:rotate(360deg);} }
-@keyframes
-mover {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
-}
-@keyframes swing {
-    0% { transform: rotate(3deg); }
-    100% { transform: rotate(-3deg); }
-}
+        -webkit-animation:spin 4s linear infinite;
+        -ms-animation: spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        -o-animation: spin 4s linear infinite;
+        animation:spin 4s linear infinite;
+        -webkit-transform-origin: 70px;
+        -ms-transform-origin: 70px;
+        -moz-transform-origin: 70px;
+        -o-transform-origin: 70px;
+        transform-origin: 70px;
+        width: 5px;
+        height: 5px;
+    }
+
+    @-moz-keyframes 
+    spin { 100% { -moz-transform: rotate(360deg);} }
+    @-moz-keyframes 
+    mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+    @-moz-keyframes 
+    swing {
+        0% { transform: rotate(3deg); }
+        100% { transform: rotate(-3deg); }
+    }
+
+    @-webkit-keyframes 
+    spin { 100% { -webkit-transform: rotate(360deg); } }
+    @-webkit-keyframes 
+    mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+    @-moz-keyframes 
+    swing {
+        0% { transform: rotate(3deg); }
+        100% { transform: rotate(-3deg); }
+    }
+
+    @keyframes 
+    spin { 100% { transform:rotate(360deg);} }
+    @keyframes
+    mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+    @keyframes swing {
+        0% { transform: rotate(3deg); }
+        100% { transform: rotate(-3deg); }
+    }
