@@ -23,6 +23,9 @@ if (result.bg === 'death') {
     const h1 = document.createElement('h1');
     h1.textContent = 'You Lose!';
     header.appendChild(h1);
+    if (result.name === 'BAA3') {
+        document.getElementById('encounter').className = result.encounter;
+    }
 } else {
     const music = document.getElementById('music');
     music.setAttribute('src', 'audio/Galway.mp3');
