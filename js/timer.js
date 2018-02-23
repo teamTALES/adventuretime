@@ -5,7 +5,7 @@ let startLevel = 0;
 function timer() {
     startLevel = game.level; // eslint-disable-line
     console.log(startLevel);
-    setTimeout(ticker, 30000);
+    setTimeout(ticker, 60000);
 };
 timer();
 // Counts down the amount of time set and shrinks the counter bar.

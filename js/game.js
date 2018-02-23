@@ -32,7 +32,7 @@ const game = {
         this.player = JSON.parse(localStorage.getItem('settings'));
 
         if (this.player.choices.length === 0){
-            this.story.innerHTML = `Welcome, ${this.player.name}! ` + script[0].story; // eslint-disable-line
+            this.story.innerHTML = `<p>Welcome, ${this.player.name}!</p> ` + script[0].story; // eslint-disable-line
             choices.a.innerText = script[0].aButton; // eslint-disable-line
             choices.b.innerText = script[0].bButton; // eslint-disable-line
         } else {
@@ -91,7 +91,7 @@ const game = {
             localStorage.setItem('gameInProgress', 'false');
             window.location.href = 'results.html';
         } else {
-            secs = 30; // eslint-disable-line
+            secs = 60; // eslint-disable-line
             countdown.style.width = '100%';
 
             timer(); // eslint-disable-line
