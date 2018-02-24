@@ -7,6 +7,10 @@ choices.a.addEventListener('click', function (){
     game.player.choices += 'A';
     game.level++;
 
+    if (game.cancelTimeout){
+        clearTimeout(game.cancelTimeout);
+    }
+
     game.endCheck();
 });
 
@@ -26,6 +30,8 @@ const game = {
     header: document.querySelector('header'),
     title:  document.createElement('h1'),
     encounter: document.getElementById('encounter'),
+    countdown: document.getElementById('count100'),
+    seconds: 60,
 
     start: function (){
         localStorage.setItem('gameInProgress','true');
@@ -35,11 +41,12 @@ const game = {
             this.story.innerHTML = `<p>Welcome, ${this.player.name}!</p> ` + script[0].story; // eslint-disable-line
             choices.a.innerText = script[0].aButton; // eslint-disable-line
             choices.b.innerText = script[0].bButton; // eslint-disable-line
+            this.timer();
         } else {
             this.level = this.player.choices.length;
             this.reload();
         }
-
+        
         this.avatar.className = this.player.character;
         this.title.textContent = 'Chapter 1';
         this.title.className = 'chapterTitles';
@@ -75,7 +82,7 @@ const game = {
         this.title.textContent = 'Chapter ' + (this.level + 1);
         this.title.className = 'chapterTitles';
         this.header.appendChild(this.title);
-        scroll(0,0);
+        this.timer();
     },
 
     endCheck: function() {
@@ -92,11 +99,41 @@ const game = {
             localStorage.setItem('gameInProgress', 'false');
             window.location.href = 'results.html';
         } else {
-            seconds = 60;  // eslint-disable-line
-            secs = 30; // eslint-disable-line
-            countdown.style.width = '100%';
-
             game.reload();
+        }
+    },
+
+    timer: function(){
+        const startLevel = this.level;
+        this.seconds = 60;
+        this.countdown.style.width = '100%';
+
+        function timer2(){
+            if (game.seconds > 0){
+                game.cancelTimeout = setTimeout(function(){
+                    game.seconds--;
+                    game.counterBar();
+                    console.log(game.seconds);
+                    timer2();
+                }, 1000);
+            } else {
+                const random = ['A', 'B'];
+                const randomNumber = Math.floor(Math.random() * random.length);
+                game.player.choices += random[randomNumber]; 
+                game.level++; 
+                game.endCheck(); 
+            }
+        }
+        timer2();
+    },
+
+    counterBar: function() {
+        if(this.seconds === 20) {
+            this.countdown.style.width = '70%';
+        } else if (this.seconds === 10) {
+            this.countdown.style.width = '40%';
+        } else if  (this.seconds === 0) {
+            this.countdown.style.width = '0';
         }
     },
 };
