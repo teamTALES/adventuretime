@@ -2,44 +2,45 @@
 <html>
     <head>
         <title>Tale of the Tales</title>
-       <link rel="stylesheet" id='css' href="css/main.css">
-       <link rel="stylesheet" href="css/game.css">
-       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-       <link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet">
-
+        <link rel="stylesheet" id="css" href="css/main.css">
+        <link rel="stylesheet" href="css/game.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet">
     </head>
     <body>
+        <header>
+        </header>
 
-    <header>
-    </header>
+        <section id="consoleWindow" class="village">
+            <div id="avatar" class="sj"></div>
+            <div id="encounter"></div>
+        </section>
 
-    <section id="consoleWindow" class="village">
-        <div id= "avatar" class="sj"></div>
-        <div id= "encounter"></div>
-    </section>
-    <section id="story">
+        <section id="story"></section>
         
-    </section>
-    <form id="choices">
-        <label for="a">
-            <button type="button" id="a">A</button>
-        </label>
-
-        <label for="b">
+        <form id="choices">
+            <label for="a">
+                <button type="button" id="a">A</button>
+            </label>
+            <label for="b">
                 <button type="button" id="b">B</button>
-        </label>
-    </form>
-    <div id="countdown">
-        <div id="count100"></div>
-    </div>
-    <audio src="audio/ThatchedVillagers.mp3" autoplay loop id="music"></audio>
-    <div class="navigation">
-        <img src="images/mute.png" id="mute" title="Mute">
-        <a href="index.html"><img src="images/home.png" id="home" title="Main"></a>
-        <a href="leaderboard-credits.html"><img src="images/results.png" id="resultsicon" title="Leaderboard/Credits"></a>
-    </div>    
-    <script src="js/story.js"></script>
-    <script src="js/game.js"></script>
-    <script src="js/timer.js"></script>
+            </label>
+        </form>
+
+        <div id="countdown">
+            <div id="count100"></div>
+        </div>
+
+        <audio src="audio/ThatchedVillagers.mp3" autoplay loop id="music"></audio>
+
+        <div class="navigation">
+            <img src="images/mute.png" id="mute" title="Mute">
+            <a href="index.html"><img src="images/home.png" id="home" title="Main"></a>
+            <a href="leaderboard-credits.html"><img src="images/results.png" id="resultsicon" title="Leaderboard/Credits"></a>
+        </div>    
+        
+        <script src="js/story.js"></script>
+        <script src="js/game.js"></script>
+        <script src="js/timer.js"></script>
     </body>
 </html>

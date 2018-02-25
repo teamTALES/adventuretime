@@ -20,7 +20,7 @@
     transition: all .2s ease-in-out;
 }
 
-.oldResult:hover{
+.oldResult:hover {
     transform: scale(1.05);
 }
 
@@ -30,15 +30,16 @@
     display: inline-block;
 }
 
+/* eslint doesn't lint your CSS, so you don't need this */
 /* eslint disable */
 
-.oldResult h3{
+.oldResult h3 {
     width: 60%; 
     height: 20%;
-    display: inline;
+    display: inline; /* changing this to inline-block would have the same affect and also make vscode stop yelling at you */
     margin: 0;
 }
-.oldResult h4{
+.oldResult h4 {
     width: 60%;
     height: 50%;
     display: inline;

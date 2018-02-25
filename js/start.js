@@ -13,6 +13,12 @@ const player = {
 };
 
 if (localStorage.getItem('settings')){
+    /*
+        Setting the style here creates an inline style (meaning its in the elements tag).
+        This could be potentially problematic in the future, so generally when
+        affecting styles from JS, we toggle a class (like y'all do elsewhere)
+    
+    */
     resume.setAttribute('style', 'display: inline-block');
 }
 

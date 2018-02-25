@@ -3,6 +3,9 @@ if (localStorage.getItem('results')) {
     const resultsArray = JSON.parse(localStorage.getItem('results'));
 
     for (let i = 0; i < resultsArray.length; i++){
+        /*
+            Another place where making smaller functions would make this more readable.
+        */
         const previous = document.getElementById('previous');
 
         const card = document.createElement('div');
@@ -22,7 +25,7 @@ if (localStorage.getItem('results')) {
             return array.name === endID;
         }
 
-    const result = script.find(isMatch); // eslint-disable-line
+        const result = script.find(isMatch); // eslint-disable-line
         summary.textContent = result.summary;
         charName.textContent = resultsArray[i].name;
         
