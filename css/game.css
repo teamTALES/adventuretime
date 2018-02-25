@@ -48,6 +48,10 @@
 /* 
 Floating Nav */
 
+/*
+ These two classes seem really similar - could probably refactor
+ into one class of shared propoerties, then an additional one for what another element needs
+*/
 .navigation {
     position: fixed;
     top: 15px;
@@ -226,6 +230,11 @@ Floating Nav */
 
 /* Styling for the counter bar */
 
+/* 
+    Again, these are pretty repetitive - 
+    once we start repeating ourselves anywhere, we want to look for ways to avoid doing so.
+    Here that means either a class with all shared attributes then the ids only have what's different.
+*/
 #countdown {
     width: 60%;
     margin: 10px auto;
