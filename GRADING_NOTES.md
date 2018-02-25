@@ -13,3 +13,5 @@ JS
 - See more notes in individual files.
 
 HTML
+- Looks good! There was some messy indentation though, and also a link tag has an unneeded id, with single quotes.
+- One suggestion: use more white space! You started in one file, to use it to separate elements and make it easier to read, but could always do more.
