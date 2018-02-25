@@ -37,6 +37,10 @@ const game = {
         localStorage.setItem('gameInProgress','true');
         this.player = JSON.parse(localStorage.getItem('settings'));
 
+        /*
+            Instead of disabling all the lines, you should add
+            script as a global variable to your eslintrc.json file.
+        */
         if (this.player.choices.length === 0){
             this.story.innerHTML = `<p>Welcome, ${this.player.name}!</p> ` + script[0].story; // eslint-disable-line
             choices.a.innerText = script[0].aButton; // eslint-disable-line
@@ -62,9 +66,22 @@ const game = {
         function isMatch(array){
             return array.name === newLevel;
         }
-
+        /* 
+            Nice! Since we don't use isMatch anywhere else, I would 
+            pass it as an anonymous function instead.
+        */
         const choice = script.find(isMatch); // eslint-disable-line
 
+        /*
+            The purpose of these blocks of code would be clearer if nested inside functions
+            I just stared at "this.encounter.className" wondering what it was talking about
+            for a few seconds before I scrolled up to figure out what it was referring to.
+
+            If we put those if statements in a function called something like: toggleEncounter
+            it would be a bit easier to grep what was happening in this reload method.
+
+            Could also have a method called setText, that updates all the text.
+        */
         this.story.innerHTML = choice.story;
         choices.a.innerText = choice.aButton;
         choices.b.innerText = choice.bButton;
@@ -86,8 +103,26 @@ const game = {
     },
 
     endCheck: function() {
+        /*
+            Ooh! This is a fun pattern to use when we have an if else structured like the one below.
+
+            Instead of checking if game level is more than 3 and having our game.reload() in the else,
+            we can check if the game level isn't more than three and return.
+            
+            Like so:
+
+            if (game.level < 3) { 
+                game.reload();
+                return;
+            }
+
+            Then have all the code currently nested in our if statement, afterwards.
+        */
+
+
+
         if (game.level >= 3){
-            if (localStorage.getItem('results')){
+            if (localStorage.getItem('results')) {
                 const resultsArray = JSON.parse(localStorage.getItem('results'));
                 resultsArray.push(game.player);
                 localStorage.setItem('results', JSON.stringify(resultsArray));
@@ -128,7 +163,7 @@ const game = {
     },
 
     counterBar: function() {
-        if(this.seconds === 20) {
+        if (this.seconds === 20) {
             this.countdown.style.width = '70%';
         } else if (this.seconds === 10) {
             this.countdown.style.width = '40%';
@@ -152,6 +187,9 @@ mutebutton.addEventListener('click', function (){
     }
 });
 
+/*
+    Moving this to the top of the file would have it kick the user out a teeny bit faster!
+*/
 const gameInProgress = localStorage.getItem('gameInProgress');
 if (gameInProgress === 'false') window.location.href = 'index.html';
 game.start();

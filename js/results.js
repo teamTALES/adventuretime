@@ -4,7 +4,11 @@ if (!localStorage.getItem('gameInProgress')) window.location.href = 'index.html'
 
 const resultsArray = JSON.parse(localStorage.getItem('results'));
 const currentPlayer = resultsArray[resultsArray.length - 1];
-
+/*
+    This all feels very reminiscent of work done in the game object - 
+    is there a way we can attach what we're doing here to it?
+    In a showResults method or something similar.
+*/
 const avatar = document.getElementById('avatar');
 const consoleWindow = document.getElementById('consoleWindow');
 avatar.className = currentPlayer.character;
